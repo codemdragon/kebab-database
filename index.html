@@ -922,6 +922,14 @@
     </div>
 
     <script>
+        // Leave empty for now. When backend is ready, put its URL here.
+        const API_BASE = ''; // e.g. 'https://api.yoursite.com'
+
+        // Helper: returns either the local file or the API endpoint.
+        function getJsonUrl(file) {
+        return API_BASE ? `${API_BASE}/${file}` : file;
+        }
+
         // NEW: Maximum quantity per item (easily changeable)
         const MAX_QUANTITY_PER_ITEM = 10;
 
@@ -965,7 +973,7 @@
         async function loadAllJSON() {
             for (const file of jsonFiles) {
                 try {
-                    const response = await fetch(file);
+                    const response = await fetch(getJsonUrl(file));
                     if (!response.ok) throw new Error(`Failed to load ${file}`);
                     const data = await response.json();
                     menuData[file] = data;
@@ -1155,7 +1163,7 @@
                 const optionsDiv = document.createElement('div');
                 optionsDiv.className = 'modal-option';
 
-                // ✅ check if all options same price
+                // check if all options same price
                 const allSamePrice = item.options.every(
                     opt => opt.price === item.options[0].price
                 );
@@ -1180,7 +1188,7 @@
                 `;
                 modalOptions.appendChild(optionsDiv);
 
-                // ✅ bind AFTER element exists
+                // bind AFTER element exists
                 const optionSelect = optionsDiv.querySelector('#modal-option-select');
                 optionSelect.addEventListener('change', e => {
                     selectedOptionIndex = parseInt(e.target.value, 10);
@@ -1520,27 +1528,68 @@
         }
 
         // Handle form submission
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            
-            // Check validity one last time before submitting
-            checkFormValidity();
-            if (placeOrderButton.disabled) {
-                return;
-            }
-            
-            // NEW: Set confirmation message based on delivery type
-            const deliveryType = document.getElementById('delivery-type').value;
-            const confirmationMessage = document.getElementById('confirmation-message');
-            
-            if (deliveryType === 'collection') {
-                confirmationMessage.textContent = 'Thank you for your order. Please come collect your food in 25-30 minutes.';
-            } else {
-                confirmationMessage.textContent = 'Thank you for your order. We\'ll start preparing it right away.';
-            }
-            
-            orderConfirmation.classList.remove('hidden');
+        // Handle form submission
+        async function handleFormSubmit(e) {
+        e.preventDefault();
+
+        // Check validity one last time before submitting
+        checkFormValidity();
+        if (placeOrderButton.disabled) {
+            return;
         }
+
+        // collect order data to send to backend if needed
+        const deliveryType = document.getElementById('delivery-type').value;
+        const order = {
+            deliveryType,
+            customer: {
+            fullName: document.getElementById('full-name').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            specialInstructions: document.getElementById('special-instructions').value
+            },
+            items: cart.map(item => ({
+            name: item.name,
+            price: item.price,
+            quantity: item.quantity,
+            selectedOption: item.selectedOption,
+            selectedSauce: item.selectedSauce,
+            selectedVegetables: item.selectedVegetables,
+            selectedDrink: item.selectedDrink
+            }))
+        };
+
+        // send to backend only if API_BASE is set
+        if (API_BASE) {
+            try {
+            const response = await fetch(`${API_BASE}/orders`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(order)
+            });
+            if (!response.ok) throw new Error('Order failed');
+            // optional: read backend response
+            const data = await response.json();
+            console.log('Order submitted:', data);
+            } catch (err) {
+            console.error(err);
+            alert('There was a problem sending your order. Please try again.');
+            }
+        }
+
+        // your existing confirmation message logic
+        const confirmationMessage = document.getElementById('confirmation-message');
+        if (deliveryType === 'collection') {
+            confirmationMessage.textContent =
+            'Thank you for your order. Please come collect your food in 25-30 minutes.';
+        } else {
+            confirmationMessage.textContent =
+            'Thank you for your order. We\'ll start preparing it right away.';
+        }
+
+        orderConfirmation.classList.remove('hidden');
+        }
+
 
         // Smooth scrolling for navigation
         document.querySelectorAll('.nav-link').forEach(link => {
