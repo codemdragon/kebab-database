@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "name": "Nash hot bird Burger",
+      "description": "Spicy Nashville-style chicken burger with nachos cheese, pickles, burger blast sauce and 1 dip",
+      "image": "images/Nash Hot Bird Burger.jpg",
+      "price": 6.00,
+      "tags": ["Chicken menu", "burger", "chicken", "spicy"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    },
+    {
+      "name": "Nash Crunch Burger",
+      "description": "Crispy chicken burger with a Nashville crunch",
+      "image": "images/Nash Crunch Burger.jpg",
+      "price": 6.50,
+      "tags": ["Chicken menu", "burger", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    },
+    {
+      "name": "Hot Honey Siracha Burger",
+      "description": "Chicken burger with hot honey sriracha sauce",
+      "image": "images/Hot Honey Siracha Burger.jpg",
+      "price": 6.50,
+      "tags": ["Chicken menu", "burger", "chicken", "spicy"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    },
+    {
+      "name": "Korean BBQ Burger",
+      "description": "Chicken burger with savory Korean BBQ sauce",
+      "image": "images/Korean BBQ Burger.jpg",
+      "price": 6.50,
+      "tags": ["Chicken menu", "burger", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    },
+    {
+      "name": "Buffalo Chicken Burger",
+      "description": "Double smashed beef patties with cheese and special sauce",
+      "image": "images/Buffalo Kick Burger.jpg",
+      "price": 7.00,
+      "tags": ["Chicken menu", "burger", "beef"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    }
+  ]
+}

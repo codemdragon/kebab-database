@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "name": "Crispy Chicken Wrap",
+      "description": "crispy chicken with your choice of salad, your choice of sauce and 1 dip",
+      "image": "images/Crispy Chicken Wrap.jpg",
+      "price": 7.00,
+      "tags": ["Wrap-Tastic", "wrap", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": true
+    },
+    {
+      "name": "Grilled Chicken Wrap",
+      "description": "Grilled chicken with your choice of salad, your choice of sauce and 1 dip",
+      "image": "images/Grilled Chicken Wrap.jpg",
+      "price": 7.00,
+      "tags": ["Wrap-Tastic", "wrap", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": true
+    },
+    {
+      "name": "Pulled Beef Wrap",
+      "description": "Tender pulled beef with your choice of salad, your choice of sauce and 1 dip",
+      "image": "images/Pulled Beef Wrap.jpg",
+      "price": 7.50,
+      "tags": ["Wrap-Tastic", "wrap", "beef"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": true
+    },
+    {
+      "name": "Veg Paneer Wrap",
+      "description": "Delicious paneer cubes with your choice of salad, your choice of sauce and 1 dip",
+      "image": "images/Veg Paneer Wrap.jpg",
+      "price": 7.00,
+      "tags": ["Wrap-Tastic", "wrap", "vegetarian"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": true
+    },
+    {
+      "name": "Fresh Falafel Wrap",
+      "description": "Crispy falafel with fresh salad and sauce in a wrap",
+      "image": "images/Fresh Falafel Wrap.jpg",
+      "price": 6.50,
+      "tags": ["Wrap-Tastic", "wrap", "vegetarian"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": true
+    },
+    {
+      "name": "Butter Chicken Box",
+      "description": "Creamy butter chicken served with rice",
+      "image": "images/Butter Chicken Box.jpg",
+      "price": 9.00,
+      "tags": ["Wrap-Tastic", "box", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Chicken Fajita Box",
+      "description": "Sizzling chicken fajitas served with rice",
+      "image": "images/Chicken Fajita Box.jpg",
+      "price": 9.00,
+      "tags": ["Wrap-Tastic", "box", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Chicken Tikka Masala Box",
+      "description": "Classic chicken tikka masala served with rice",
+      "image": "images/Chicken Tikka Masala Box.jpg",
+      "price": 9.00,
+      "tags": ["Wrap-Tastic", "box", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    }
+  ]
+}

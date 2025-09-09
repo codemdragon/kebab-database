@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "name": "Nacho Bean Burger",
+      "description": "Spicy bean burger with nachos cheese",
+      "image": "images/Nacho Bean Burger.jpg",
+      "price": 6.00,
+      "tags": ["Veggie-Tastic", "burger", "vegetarian"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    },
+    {
+      "name": "Veggie Crunch Burger",
+      "description": "Crispy veggie burger with a satisfying crunch",
+      "image": "images/Veggie Crunch Burger.jpg",
+      "price": 6.00,
+      "tags": ["Veggie-Tastic", "burger", "vegetarian"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    }
+  ]
+}

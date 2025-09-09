@@ -1,0 +1,172 @@
+{
+  "items": [
+    {
+      "name": "Apple Pie",
+      "description": "Warm, flaky pastry filled with sweet apple cinnamon filling",
+      "image": "images/Apple Pie.jpg",
+      "price": 2.50,
+      "tags": ["Addons & Sauces", "dessert"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Jalapeno Balls",
+      "description": "Crispy jalapeno cheese balls",
+      "image": "images/Jalapeno Balls.jpg",
+      "price": 2.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Cheese Sticks",
+      "description": "Crispy cheese sticks",
+      "image": "images/Cheese Sticks.jpg",
+      "price": 2.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Samosas (3 Pieces)",
+      "description": "Crispy samosas",
+      "image": "images/Samosas.jpg",
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false,
+      "options": [
+        { "name": "Chicken", "price": 2.50 },
+        { "name": "Lamb", "price": 2.50 }
+      ]
+    },
+    {
+      "name": "Karachi Bun Kebab",
+      "description": "Traditional Karachi style bun kebab",
+      "image": "images/Karachi Bun Kebab.jpg",
+      "price": 5.00,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Onion Rings",
+      "description": "Crispy golden onion rings",
+      "image": "images/Onion Rings.jpg",
+      "price": 3.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Buffalo Kick Sauce",
+      "description": "Spicy buffalo sauce with a tangy kick",
+      "image": "images/Buffalo Kick Sauce.jpg",
+      "price": 0.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Burger Blast Sauce",
+      "description": "Our signature burger sauce with special spices",
+      "image": "images/Burger Blast Sauce.jpg",
+      "price": 0.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Garlic Chilli Sauce",
+      "description": "Spicy garlic chilli sauce",
+      "image": "images/Garlic Chilli Sauce.jpg",
+      "price": 0.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Garlic Herb Sauce",
+      "description": "Creamy garlic herb sauce",
+      "image": "images/Garlic Herb Sauce.jpg",
+      "price": 0.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Habanero Mayo Sauce",
+      "description": "Spicy habanero mayonnaise sauce",
+      "image": "images/Habanero Mayo Sauce.jpg",
+      "price": 0.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Hot Honey Siracha Sauce",
+      "description": "Sweet and spicy hot honey sriracha sauce",
+      "image": "images/Hot Honey Siracha Sauce.jpg",
+      "price": 0.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Mango Habanero Sauce",
+      "description": "Fruity and spicy mango habanero sauce",
+      "image": "images/Mango Habanero Sauce.jpg",
+      "price": 0.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Siracha Heat Sauce",
+      "description": "Fiery sriracha heat sauce",
+      "image": "images/Siracha Heat Sauce.jpg",
+      "price": 0.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Smokey BBQ Sauce",
+      "description": "Rich and smokey BBQ sauce",
+      "image": "images/Smokey BBQ Sauce.jpg",
+      "price": 0.50,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    }
+  ]
+}
