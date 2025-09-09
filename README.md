@@ -21,7 +21,8 @@ The menu items are organized into several JSON files, each representing a catego
 - `addons-sauces.json`
 - `loaded-fries.json`
 
-⚠️ **Important:** All JSON files must be located in the same directory as `index.html`.
+⚠️ **Important:** All JSON files must be located in the same directory as `index.html`.  
+Images for menu items are now stored in the `images/` folder, so the `image` field should point to `images/YourImageName.jpg`.
 
 ---
 
@@ -33,7 +34,7 @@ Example:
 {
   "name": "Chicken Tenders or Wings",
   "description": "Chicken wings or tenders with any 1 sauce",
-  "image": "Chicken Tenders or Wings.jpg",
+  "image": "images/Chicken Tenders or Wings.jpg",
   "tags": ["Wings/tenders", "chicken", "D"],
   "mealPriceModifier": 2.50,
   "options": [
@@ -52,7 +53,8 @@ Example:
 
 - **name**: Name of the menu item. *(string)*
 - **description**: Short description displayed under the name. *(string)*
-- **image**: Filename of the image (must exist in the same folder). *(string)*
+- **image**: Filename of the image (must exist in the `images/` folder). *(string)*  
+  e.g. `"images/Chocolate Milkshake.jpg"`
 - **tags**:
   - Used for categorization and filtering.
   - First tag = badge on menu card.
@@ -75,7 +77,8 @@ Example:
 
 - **Size**: All images must be **1200 × 1200 px**.
 - **Format**: `.jpg` or `.png`.
-- **Naming**: Must match exactly the `image` field in JSON (case-sensitive).
+- **Location**: All images go inside the `images/` folder.
+- **Naming**: Must match exactly the `image` field in JSON (case-sensitive), including the `images/` prefix.
 
 **Special Cases:**
 
@@ -91,7 +94,7 @@ Example:
 2. Copy an existing item as a template.
 3. Edit `name`, `description`, `image`, `tags`, `price/options`.
 4. Save the JSON file.
-5. Add the image file (1200×1200 px) to the same folder.
+5. Add the image file (1200×1200 px) to the `images/` folder.
 6. Validate the JSON (use [jsonlint.com](https://jsonlint.com)) to avoid syntax errors.
 7. Refresh the website to see changes.
 
@@ -105,7 +108,7 @@ Example:
 {
   "name": "Coke Can",
   "description": "Chilled Coca Cola (330ml)",
-  "image": "Coke Can.jpg",
+  "image": "images/Coke Can.jpg",
   "price": 1.50,
   "tags": ["Drinks", "D"],
   "mealPriceModifier": 0.00,
@@ -121,7 +124,7 @@ Example:
 {
   "name": "Chocolate Milkshake",
   "description": "Thick chocolate shake with whipped cream",
-  "image": "Chocolate Milkshake.jpg",
+  "image": "images/Chocolate Milkshake.jpg",
   "price": 3.50,
   "tags": ["Milkshake", "M"],
   "mealPriceModifier": 0.00,
@@ -137,7 +140,7 @@ Example:
 {
   "name": "Samosas (3 Pieces)",
   "description": "Crispy samosas",
-  "image": "Samosas.jpg",
+  "image": "images/Samosas.jpg",
   "tags": ["Addons & Sauces"],
   "mealPriceModifier": 0.00,
   "showSlider": false,
