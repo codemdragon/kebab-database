@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "name": "Double Up Beef Burger",
+      "description": "Double beef patties with double nachos cheese, glazed onions, burger blast sauce and 1 dip",
+      "image": "images/Double Up Beef Burger.jpg",
+      "price": 8.50,
+      "tags": ["Beefy-Tastic", "burger", "beef"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    },
+    {
+      "name": "Single Up Beef Burger",
+      "description": "Single beef patty with nachos cheese, glazed onions, burger blast sauce and 1 dip",
+      "image": "images/Single Up Beef Burger.jpg",
+      "price": 6.50,
+      "tags": ["Beefy-Tastic", "burger", "beef"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    },
+    {
+      "name": "Double Smash Beef Burger",
+      "description": "Double smashed beef patties with cheese and special sauce",
+      "image": "images/Double Smash Beef Burger.jpg",
+      "price": 9.00,
+      "tags": ["Beefy-Tastic", "burger", "beef"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    },
+    {
+      "name": "Single Smash Beef Burger",
+      "description": "Single smashed beef patty with cheese and special sauce",
+      "image": "images/Single Smash Beef Burger.jpg",
+      "price": 7.00,
+      "tags": ["Beefy-Tastic", "burger", "beef"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    }
+  ]
+}

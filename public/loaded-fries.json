@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "name": "Nacho Beef Loaded Fries",
+      "description": "Crispy fries topped with seasoned beef, nacho cheese, jalapeños, and sour cream",
+      "image": "images/Nacho Beef.jpg",
+      "price": 6.50,
+      "tags": ["Loaded Fries"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Nacho Chicken Loaded Fries",
+      "description": "Crispy fries topped with seasoned chicken, nacho cheese, jalapeños, and sour cream",
+      "image": "images/Nacho Chicken.jpg",
+      "price": 6.50,
+      "tags": ["Loaded Fries"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Nacho Jalepeno Cheese",
+      "description": "Crispy fries topped with seasoned chicken, nacho cheese, jalapeños, and sour cream",
+      "image": "images/Nacho Chicken.jpg",
+      "price": 6.50,
+      "tags": ["Loaded Fries"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Jalapeno Cheese",
+      "description": "Creamy jalapeno cheese dip",
+      "image": "images/Jalapeno Cheese.jpg",
+      "price": 1.00,
+      "tags": ["Loaded Fries"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Chicken Nuggets",
+      "description": "Crispy chicken nuggets",
+      "image": "images/Chicken Nuggets.jpg",
+      "price": 4.00,
+      "tags": ["Loaded Fries", "chicken"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    }
+  ]
+}

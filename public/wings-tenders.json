@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "name": "Chicken Tenders or Wings",
+      "description": "Chicken wings or tenders with any 1 sauce",
+      "image": "images/Tenders & Wings.jpg",
+      "tags": ["Wings/tenders", "chicken"],
+      "mealPriceModifier": 2.50,
+      "options": [
+        {"name": "5 piece", "price": 5.00},
+        {"name": "10 piece", "price": 9.00},
+        {"name": "15 piece", "price": 14.00},
+        {"name": "20 piece", "price": 18.00}
+      ],
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    }
+  ]
+}

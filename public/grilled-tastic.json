@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "name": "Single Grilled Chicken Burger",
+      "description": " Single grilled chicken patty with nachos cheese, lettuce and our signiture KOC sauce",
+      "image": "images/Single Grilled Chicken Burger.jpg",
+      "price": 5.50,
+      "tags": ["Grilled-Tastic", "burger", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    },
+    {
+      "name": "Double Grilled Chicken Burger",
+      "description": "Double grilled chicken patties with nachos cheese, lettuce and our signiture KOC sauce",
+      "image": "images/Double Grilled Chicken Burger.jpg",
+      "price": 7.50,
+      "tags": ["Grilled-Tastic", "burger", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    },
+    {
+      "name": "Grilled Chicken Tenders & Rice",
+      "description": "Grilled chicken tenders served with rice",
+      "image": "images/Grilled Chicken Tenders & Rice.jpg",
+      "price": 8.00,
+      "tags": ["Grilled-Tastic", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Grilled Chicken Tenders",
+      "description": "Succulent grilled chicken tenders",
+      "image": "images/Grilled Chicken Tenders.jpg",
+      "price": 6.00,
+      "tags": ["Grilled-Tastic", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false,
+      "options": [
+        { "name": "5 piece", "price": 5.00 },
+        { "name": "10 piece", "price": 9.00 },
+        { "name": "15 piece", "price": 14.00 },
+        { "name": "20 piece", "price": 18.00 }
+      ]
+    },
+    {
+      "name": "Kids Pop Box",
+      "description": "Double grilled chicken patties with nachos cheese, lettuce and our signiture KOC sauce",
+      "image": "images/Kids Pop Box.jpg",
+      "price": 7.50,
+      "tags": ["Grilled-Tastic", "burger", "chicken"],
+      "mealPriceModifier": 2.50,
+      "showSlider": false,
+      "sauces": true,
+      "vegetables": false
+    }
+  ]
+}

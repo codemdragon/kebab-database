@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "name": "Lamb Doner and Chips",
+      "description": "Succulent lamb doner with crispy fries, onion, cucumber,pickles, tomato, garlic mayo and garlic chilli sauce",
+      "image": "images/Lamb Doner & Chips.jpg",
+      "price": 8.00,
+      "tags": ["Don-Shawarma", "doner", "lamb"],
+      "mealPriceModifier": 1.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Chicken Shawarma & Chips",
+      "description": "Tender chicken shawarma with crispy fries",
+      "image": "images/Chicken Shawarma & Chips.jpg",
+      "price": 8.00,
+      "tags": ["Don-Shawarma", "shawarma", "chicken"],
+      "mealPriceModifier": 1.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Chicken Shawarma Sandwich",
+      "description": "Classic chicken shawarma in a sandwich",
+      "image": "images/Chicken Shawarma Sandwich.jpg",
+      "price": 7.00,
+      "tags": ["Don-Shawarma", "shawarma", "chicken"],
+      "mealPriceModifier": 1.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Chicken Shawarma Wrap",
+      "description": "Delicious chicken shawarma in a wrap",
+      "image": "images/Chicken Shawarma Wrap.jpg",
+      "price": 7.00,
+      "tags": ["Don-Shawarma", "shawarma", "chicken"],
+      "mealPriceModifier": 1.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Lamb Doner Sandwich",
+      "description": "Succulent lamb doner in a sandwich",
+      "image": "images/Lamb Doner Sandwich.jpg",
+      "price": 7.00,
+      "tags": ["Don-Shawarma", "doner", "lamb"],
+      "mealPriceModifier": 1.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
+      "name": "Lamb Doner Wrap",
+      "description": "Delicious lamb doner in a wrap",
+      "image": "images/Lamb Doner Wrap.jpg",
+      "price": 7.00,
+      "tags": ["Don-Shawarma", "doner", "lamb"],
+      "mealPriceModifier": 1.50,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    }
+  ]
+}
