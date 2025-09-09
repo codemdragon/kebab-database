@@ -151,3 +151,4 @@ Example:
 - The Developer can provide guidance if needed, but **ongoing menu management is the Client’s responsibility**.
 
 ---
+
