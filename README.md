@@ -1,4 +1,4 @@
-#  Kebab O'Clock – Menu Management Guide
+# Kebab O'Clock – Menu Management Guide
 
 This guide explains how to manage the menu items for the **Kebab O'Clock website** by editing the associated JSON files.
 
@@ -43,59 +43,78 @@ Example:
   "sauces": true,
   "vegetables": false
 }
-```
+Field Explanations
+name: Name of the menu item. (string)
 
-### Field Explanations
-- **name**: Name of the menu item. *(string)*  
-- **description**: Short description displayed under the name. *(string)*  
-- **image**: Filename of the image (must exist in the same folder). *(string)*  
-- **tags**:
-  - Used for categorization and filtering.
-  - First tag = badge on menu card.
-  - Special tags:
-    - `"D"` → Drinks (centered images, scaled properly for cans).
-    - `"M"` → Milkshakes (image scaled fully outward to show full picture on all screen sizes).
-- **mealPriceModifier**: Extra cost when upgrading to a meal. *(decimal)*  
-- **options**: *(optional)* variations of the item.
-  - **Special behavior:**
-    - If *all options* have prices → price shows on the **button**.
-    - If *not all options* have prices → price shows in the **dropdown**.
-    - Example: Samosas (Chicken/Lamb) both priced → shows on button.
-- **showSlider**: Always set to `false` (legacy field).
-- **sauces**: `true`/`false` – whether customer can choose sauces.
-- **vegetables**: `true`/`false` – whether customer can choose vegetables.
+description: Short description displayed under the name. (string)
 
----
+image: Filename of the image (must exist in the same folder). (string)
 
-## 3. Image Rules
+tags:
 
-- **Size**: All images must be **1200 x 1200px**.
-- **Format**: `.jpg` or `.png`.
-- **Naming**: Must match exactly the `image` field in JSON (case-sensitive).
+Used for categorization and filtering.
 
-**Special Cases:**
-- **Drinks** (`"D"` tag): Canned drinks centered properly.
-- **Milkshakes** (`"M"` tag): Full image always shown, scaled outward.
-- **All Other Items**: Positioned according to Website Manager’s preferences.
+First tag = badge on menu card.
 
----
+Special tags:
 
-## 4. Editing Workflow
+"D" → Drinks (centered images, scaled properly for cans).
 
-1. Identify which JSON file contains the category.
-2. Copy an existing item as a template.
-3. Edit `name`, `description`, `image`, `tags`, `price/options`.
-4. Save the JSON file.
-5. Add the image file (1200x1200px) to the same folder.
-6. Validate the JSON (use [jsonlint.com](https://jsonlint.com)) to avoid syntax errors.
-7. Refresh the website to see changes.
+"M" → Milkshakes (image scaled fully outward to show full picture on all screen sizes).
 
----
+mealPriceModifier: Extra cost when upgrading to a meal. (decimal)
 
-## 5. Examples
+options: (optional) variations of the item.
 
-**Drink Example (Coke Can):**
-```json
+Special behavior:
+
+If all options have prices → price shows on the button.
+
+If not all options have prices → price shows in the dropdown.
+
+Example: Samosas (Chicken/Lamb) both priced → shows on button.
+
+showSlider: Always set to false (legacy field).
+
+sauces: true/false – whether customer can choose sauces.
+
+vegetables: true/false – whether customer can choose vegetables.
+
+3. Image Rules
+Size: All images must be 1200 × 1200 px.
+
+Format: .jpg or .png.
+
+Naming: Must match exactly the image field in JSON (case-sensitive).
+
+Special Cases:
+
+Drinks ("D" tag): Canned drinks centered properly.
+
+Milkshakes ("M" tag): Full image always shown, scaled outward.
+
+All Other Items: Positioned according to Website Manager’s preferences.
+
+4. Editing Workflow
+Identify which JSON file contains the category.
+
+Copy an existing item as a template.
+
+Edit name, description, image, tags, price/options.
+
+Save the JSON file.
+
+Add the image file (1200×1200 px) to the same folder.
+
+Validate the JSON (use jsonlint.com) to avoid syntax errors.
+
+Refresh the website to see changes.
+
+5. Examples
+Drink Example (Coke Can):
+
+json
+Copy code
 {
   "name": "Coke Can",
   "description": "Chilled Coca Cola (330ml)",
@@ -107,10 +126,10 @@ Example:
   "sauces": false,
   "vegetables": false
 }
-```
+Milkshake Example:
 
-**Milkshake Example:**
-```json
+json
+Copy code
 {
   "name": "Chocolate Milkshake",
   "description": "Thick chocolate shake with whipped cream",
@@ -122,10 +141,10 @@ Example:
   "sauces": false,
   "vegetables": false
 }
-```
+Options Example (Samosa):
 
-**Options Example (Samosa):**
-```json
+json
+Copy code
 {
   "name": "Samosas (3 Pieces)",
   "description": "Crispy samosas",
@@ -140,15 +159,50 @@ Example:
     { "name": "Lamb", "price": 2.50 }
   ]
 }
-```
+6. Backups & Support
+Always keep a backup of JSON files before making changes.
 
----
+If something breaks, restore the previous backup.
 
-## 6. Backups & Support
+The Developer can provide guidance if needed, but ongoing menu management is the Client’s responsibility.
 
-- Always **keep a backup** of JSON files before making changes.
-- If something breaks, restore the previous backup.
-- The Developer can provide guidance if needed, but **ongoing menu management is the Client’s responsibility**.
+7. Deploying Changes to Vercel
+The site is automatically deployed from this GitHub repository using Vercel.
 
----
+If you edit files directly on GitHub
+Save/commit your changes. Vercel will automatically pick up the new commit and redeploy within a minute or two.
 
+If you work locally on your PC
+
+Pull or clone the repo.
+
+Make your JSON/image changes.
+
+Commit and push to the main branch (or the branch Vercel is connected to).
+
+Vercel will build and deploy automatically after your push.
+
+Check deployment status
+In your Vercel dashboard you’ll see the deployment logs and the new version going live.
+
+8. API Integration (Future-Proofing)
+The front-end code is already set up to talk to a backend API when it becomes available:
+
+js
+Copy code
+// In index.html
+const API_BASE = ''; // e.g. 'https://api.yoursite.com'
+
+// Helper to get file/API URL
+function getJsonUrl(file) {
+  return API_BASE ? `${API_BASE}/${file}` : file;
+}
+Current behaviour: With API_BASE = '' the site loads the JSON files locally and does not send orders anywhere.
+
+When backend is ready: Set API_BASE to your API’s URL (for example https://api.kebaboclock.com).
+
+Menu JSON will be fetched from the API instead of local files.
+
+Orders will automatically be sent to ${API_BASE}/orders via POST.
+
+No other code changes are needed — just update the API_BASE value.
