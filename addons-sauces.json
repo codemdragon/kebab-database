@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "name": "Karachi Bun Kebab",
+      "description": "Traditional Karachi style bun kebab",
+      "image": "images/Karachi Bun Kebab.jpg",
+      "price": 5.00,
+      "tags": ["Addons & Sauces"],
+      "mealPriceModifier": 0.00,
+      "showSlider": false,
+      "sauces": false,
+      "vegetables": false
+    },
+    {
       "name": "Apple Pie",
       "description": "Warm, flaky pastry filled with sweet apple cinnamon filling",
       "image": "images/Apple Pie.jpg",
@@ -52,17 +63,6 @@
       "description": "Crispy golden onion rings",
       "image": "images/Onion Rings.jpg",
       "price": 3.50,
-      "tags": ["Addons & Sauces"],
-      "mealPriceModifier": 0.00,
-      "showSlider": false,
-      "sauces": false,
-      "vegetables": false
-    },
-    {
-      "name": "Karachi Bun Kebab",
-      "description": "Traditional Karachi style bun kebab",
-      "image": "images/Karachi Bun Kebab.jpg",
-      "price": 5.00,
       "tags": ["Addons & Sauces"],
       "mealPriceModifier": 0.00,
       "showSlider": false,
@@ -170,4 +170,5 @@
     }
   ]
 }
+
 
