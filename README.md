@@ -243,24 +243,28 @@ These show how the front‑end sends orders to the backend with different combin
 
 ```json
   {
-  "deliveryType": "collection",
+  "deliveryType": "delivery",
   "customer": {
-    "fullName": "Alice Brown",
-    "phone": "555-9876",
-    "email": "alice@example.com",
-    "specialInstructions": ""
+    "fullName": "Bob Green",
+    "phone": "555-4321",
+    "email": "bob@example.com",
+    "specialInstructions": "Extra napkins"
   },
   "items": [
     {
-      "name": "Samosas (3 Pieces) (Chicken)",
+      "name": "Samosas (3 Pieces) (Lamb)",
       "price": 2.50,
       "quantity": 1,
-      "selectedOption": "Chicken"
+      "selectedOption": "Lamb"
+    },
+    {
+      "name": "Chips & Drink (Coke)",
+      "price": 2.50,
+      "quantity": 1
     }
   ],
-  "total": "2.50"
+  "total": "5.00"
 }
-]
 ```
 ##Notes on the total feild:
 * The total is calculated by summing (price × quantity) for all items in the cart.
@@ -327,6 +331,7 @@ function getJsonUrl(file) {
   * Orders will automatically be sent to `${API_BASE}/orders` via `POST`.
 
 No other code changes are needed — just update the `API_BASE` value.
+
 
 
 
