@@ -256,6 +256,11 @@ These show how the front‑end sends orders to the backend with different combin
   }
 ]
 ```
+##Notes on the `total` feild:
+* The total is calculated by summing (price × quantity) for all items in the cart.
+* It is formatted as a string with two decimal places (e.g., "11.50").
+* This field is included alongside the detailed items array in the order payload sent to the backend.
+* Including the total helps with order validation, reporting, and simplifies backend processing.
 
 **Key points for backend:**
 
@@ -316,4 +321,5 @@ function getJsonUrl(file) {
   * Orders will automatically be sent to `${API_BASE}/orders` via `POST`.
 
 No other code changes are needed — just update the `API_BASE` value.
+
 
