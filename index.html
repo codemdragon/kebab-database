@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+A<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1368,7 +1368,8 @@
                     selectedOption,
                     selectedSauce,
                     selectedVegetables,
-                    selectedDrink: isChipsDrink ? selectedDrink : null
+                    selectedDrink: isChipsDrink ? selectedDrink : null,
+                    mealPriceModifier: isChipsDrink ? currentModalItem.mealPriceModifier : 0
                 });
             }
             
@@ -1526,6 +1527,41 @@
             });
             placeOrderButton.disabled = !allFilled;
         }
+        function buildItemsForBackend(cart) {
+            const backendItems = [];
+
+            cart.forEach(item => {
+                if (item.isChipsDrink) {
+                // main item without the modifier
+                backendItems.push({
+                    name: item.name.replace(/ with Chips and.*$/, ''), // strip the trailing text
+                    price: item.price - item.mealPriceModifier,         // base price only
+                    quantity: item.quantity,
+                    selectedOption: item.selectedOption,
+                    selectedSauce: item.selectedSauce,
+                    selectedVegetables: item.selectedVegetables
+                });
+
+                // separate line for chips & drink
+                backendItems.push({
+                    name: `Chips & Drink (${item.selectedDrink})`,
+                    price: item.mealPriceModifier,
+                    quantity: item.quantity
+                });
+                } else {
+                    backendItems.push({
+                        name: item.name,
+                        price: item.price,
+                        quantity: item.quantity,
+                        selectedOption: item.selectedOption,
+                        selectedSauce: item.selectedSauce,
+                        selectedVegetables: item.selectedVegetables
+                    });
+                }
+            });
+
+            return backendItems;
+        }
 
         // Handle form submission
         // Handle form submission
@@ -1548,15 +1584,7 @@
             email: document.getElementById('email').value,
             specialInstructions: document.getElementById('special-instructions').value
             },
-            items: cart.map(item => ({
-            name: item.name,
-            price: item.price,
-            quantity: item.quantity,
-            selectedOption: item.selectedOption,
-            selectedSauce: item.selectedSauce,
-            selectedVegetables: item.selectedVegetables,
-            selectedDrink: item.selectedDrink
-            }))
+            items: buildItemsForBackend(cart)
         };
 
         // send to backend only if API_BASE is set
@@ -1796,4 +1824,3 @@
     </script>
 </body>
 </html>
-
