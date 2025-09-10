@@ -4,7 +4,7 @@
       "name": "Banana Milkshake",
       "description": "Creamy milkshake made with real bananas and vanilla ice cream",
       "image": "images/Banana Milkshake.jpg",
-      "price": 3.50,
+      "price": 4.00,
       "tags": ["Drinks & Milkshakes", "dessert", "M"],
       "mealPriceModifier": 0.00,
       "showSlider": false,
@@ -332,3 +332,4 @@
     }
   ]
 }
+
