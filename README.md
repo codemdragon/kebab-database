@@ -166,47 +166,77 @@ These show how the front‑end sends orders to the backend with different combin
 #### 1. Chicken Tenders 10-piece (BBQ sauce, no chips/drink):
 
 ```json
-"items": [
-  {
-    "name": "Chicken Tenders or Wings (10 piece) with BBQ",
-    "price": 9.00,
-    "quantity": 1,
-    "selectedOption": "10 piece",
-    "selectedSauce": "BBQ"
-  }
-]
+// {
+  "deliveryType": "collection",
+  "customer": {
+    "fullName": "Jane Smith",
+    "phone": "555-1234",
+    "email": "jane@example.com",
+    "specialInstructions": "No onions please"
+  },
+  "items": [
+    {
+      "name": "Chicken Tenders or Wings (10 piece) with BBQ",
+      "price": 9.00,
+      "quantity": 1,
+      "selectedOption": "10 piece",
+      "selectedSauce": "BBQ"
+    }
+  ],
+  "total": "9.00"
+}
 ```
 
 #### 2. Chicken Tenders 10-piece with Chips & Drink (Pepsi):
 
 ```json
-"items": [
-  {
-    "name": "Chicken Tenders or Wings (10 piece) with BBQ",
-    "price": 9.00,
-    "quantity": 1,
-    "selectedOption": "10 piece",
-    "selectedSauce": "BBQ"
+// {
+  "deliveryType": "delivery",
+  "customer": {
+    "fullName": "John Doe",
+    "phone": "123-456-7890",
+    "email": "john@example.com",
+    "specialInstructions": "Please ring the doorbell."
   },
-  {
-    "name": "Chips & Drink (Pepsi)",
-    "price": 2.50,
-    "quantity": 1
-  }
-]
+  "items": [
+    {
+      "name": "Chicken Tenders or Wings (10 piece) with BBQ",
+      "price": 9.00,
+      "quantity": 1,
+      "selectedOption": "10 piece",
+      "selectedSauce": "BBQ"
+    },
+    {
+      "name": "Chips & Drink (Pepsi)",
+      "price": 2.50,
+      "quantity": 1
+    }
+  ],
+  "total": "11.50"
+}
 ```
 
 #### 3. Samosas (3 Pieces) – Chicken:
 
 ```json
-"items": [
-  {
-    "name": "Samosas (3 Pieces) (Chicken)",
-    "price": 2.50,
-    "quantity": 1,
-    "selectedOption": "Chicken"
-  }
-]
+// {
+  "deliveryType": "collection",
+  "customer": {
+    "fullName": "Alice Brown",
+    "phone": "555-9876",
+    "email": "alice@example.com",
+    "specialInstructions": ""
+  },
+  "items": [
+    {
+      "name": "Samosas (3 Pieces) (Chicken)",
+      "price": 2.50,
+      "quantity": 1,
+      "selectedOption": "Chicken"
+    }
+  ],
+  "total": "2.50"
+}
 ```
 
 #### 4. Samosas (3 Pieces) – Lamb with Chips & Drink (Coke):
@@ -286,3 +316,4 @@ function getJsonUrl(file) {
   * Orders will automatically be sent to `${API_BASE}/orders` via `POST`.
 
 No other code changes are needed — just update the `API_BASE` value.
+
