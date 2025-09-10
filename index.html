@@ -1576,6 +1576,7 @@
 
         // collect order data to send to backend if needed
         const deliveryType = document.getElementById('delivery-type').value;
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         const order = {
             deliveryType,
             customer: {
@@ -1584,7 +1585,8 @@
             email: document.getElementById('email').value,
             specialInstructions: document.getElementById('special-instructions').value
             },
-            items: buildItemsForBackend(cart)
+            items: buildItemsForBackend(cart),
+            total: total.toFixed(2) // Add the total here
         };
 
         // send to backend only if API_BASE is set
@@ -1824,4 +1826,3 @@
     </script>
 </body>
 </html>
-
