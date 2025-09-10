@@ -166,7 +166,7 @@ These show how the front‑end sends orders to the backend with different combin
 #### 1. Chicken Tenders 10-piece (BBQ sauce, no chips/drink):
 
 ```json
-// {
+   {
   "deliveryType": "collection",
   "customer": {
     "fullName": "Jane Smith",
@@ -190,7 +190,7 @@ These show how the front‑end sends orders to the backend with different combin
 #### 2. Chicken Tenders 10-piece with Chips & Drink (Pepsi):
 
 ```json
-// {
+   {
   "deliveryType": "delivery",
   "customer": {
     "fullName": "John Doe",
@@ -219,7 +219,7 @@ These show how the front‑end sends orders to the backend with different combin
 #### 3. Samosas (3 Pieces) – Chicken:
 
 ```json
-// {
+  {
   "deliveryType": "collection",
   "customer": {
     "fullName": "Alice Brown",
@@ -242,7 +242,7 @@ These show how the front‑end sends orders to the backend with different combin
 #### 4. Samosas (3 Pieces) – Lamb with Chips & Drink (Coke):
 
 ```json
-// {
+  {
   "deliveryType": "collection",
   "customer": {
     "fullName": "Alice Brown",
@@ -327,6 +327,7 @@ function getJsonUrl(file) {
   * Orders will automatically be sent to `${API_BASE}/orders` via `POST`.
 
 No other code changes are needed — just update the `API_BASE` value.
+
 
 
 
