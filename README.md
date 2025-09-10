@@ -242,18 +242,24 @@ These show how the front‑end sends orders to the backend with different combin
 #### 4. Samosas (3 Pieces) – Lamb with Chips & Drink (Coke):
 
 ```json
-"items": [
-  {
-    "name": "Samosas (3 Pieces) (Lamb)",
-    "price": 2.50,
-    "quantity": 1,
-    "selectedOption": "Lamb"
+// {
+  "deliveryType": "collection",
+  "customer": {
+    "fullName": "Alice Brown",
+    "phone": "555-9876",
+    "email": "alice@example.com",
+    "specialInstructions": ""
   },
-  {
-    "name": "Chips & Drink (Coke)",
-    "price": 2.50,
-    "quantity": 1
-  }
+  "items": [
+    {
+      "name": "Samosas (3 Pieces) (Chicken)",
+      "price": 2.50,
+      "quantity": 1,
+      "selectedOption": "Chicken"
+    }
+  ],
+  "total": "2.50"
+}
 ]
 ```
 ##Notes on the total feild:
@@ -321,6 +327,7 @@ function getJsonUrl(file) {
   * Orders will automatically be sent to `${API_BASE}/orders` via `POST`.
 
 No other code changes are needed — just update the `API_BASE` value.
+
 
 
 
