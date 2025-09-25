@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,1810 +21,1844 @@
             scroll-behavior: smooth;
             --image-position-y: 0%;
         }
-        
-        .header-logo-text {
-            font-family: 'Xuong', sans-serif;
-        }
-        
-        .righteous-font {
-            font-family: 'Righteous', cursive;
-        }
-        
-        .lato-font {
-            font-family: 'Lato', sans-serif;
-        }
 
-        .cart-drawer {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .cart-drawer.open {
-            transform: translateX(0);
-        }
-        
-        .overlay {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out;
-        }
-        
-        .overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .active-section {
-            color: #ff6a00 !important;
-        }
-        
-        .tag-filter.active {
-            background-color: #ff6a00;
-            color: black;
-        }
-        
-        .menu-item-card {
-            transition: transform 0.2s ease;
-            cursor: pointer;
-        }
-        
-        .menu-item-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .checkout-page {
-            display: none;
-        }
-        
-        .image-control-panel {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(26, 26, 26, 0.9);
-            padding: 15px;
-            border-radius: 10px;
-            z-index: 100;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid #333;
-            display: none;
-        }
-        
-        .image-control-panel h4 {
-            margin: 0 0 10px 0;
-            color: #ff6a00;
-            font-size: 14px;
-            text-align: center;
-        }
-        
-        .image-control-slider {
-            width: 200px;
-            margin: 0 10px;
-        }
-        
-        .image-control-value {
-            color: white;
-            font-size: 12px;
-            min-width: 40px;
-            text-align: center;
-        }
-        
-        /* Updated home section for 150% scaling */
-        #home {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-        
-        #home-backdrop {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('Backdrop.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: blur(8px);
-            z-index: -1;
-        }
-        
-        #home-backdrop::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
-        }
-        
+    .header-logo-text {
+        font-family: 'Xuong', sans-serif;
+    }
+    
+    .righteous-font {
+        font-family: 'Righteous', cursive;
+    }
+    
+    .lato-font {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .cart-drawer {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .cart-drawer.open {
+        transform: translateX(0);
+    }
+    
+    .overlay {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .active-section {
+        color: #ff6a00 !important;
+    }
+    
+    .tag-filter.active {
+        background-color: #ff6a00;
+        color: black;
+    }
+    
+    .menu-item-card {
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+    
+    .menu-item-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .checkout-page {
+        display: none;
+    }
+    
+    .image-control-panel {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(26, 26, 26, 0.9);
+        padding: 15px;
+        border-radius: 10px;
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        border: 1px solid #333;
+        display: none;
+    }
+    
+    .image-control-panel h4 {
+        margin: 0 0 10px 0;
+        color: #ff6a00;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .image-control-slider {
+        width: 200px;
+        margin: 0 10px;
+    }
+    
+    .image-control-value {
+        color: white;
+        font-size: 12px;
+        min-width: 40px;
+        text-align: center;
+    }
+    
+    /* Updated home section for 150% scaling */
+    #home {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    #home-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('Backdrop.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px);
+        z-index: -1;
+    }
+    
+    #home-backdrop::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+    }
+    
+    #home-content {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 1;
+        max-width: 7xl;
+        margin: 0 auto;
+        padding: 0 1rem;
+        text-align: left;
+        /* CHANGED: Increased scale from 0.85 to 0.95 */
+        transform: scale(0.9);
+        transform-origin: top left;
+        width: 105.26%; /* 100% / 0.95 */
+    }
+    
+    @media (min-width: 640px) {
         #home-content {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            z-index: 1;
-            max-width: 7xl;
-            margin: 0 auto;
-            padding: 0 1rem;
-            text-align: left;
-            /* CHANGED: Increased scale from 0.85 to 0.95 */
-            transform: scale(0.9);
-            transform-origin: top left;
-            width: 105.26%; /* 100% / 0.95 */
+            padding: 0 1.5rem;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        #home-content {
+            padding: 0 2.5rem;
+        }
+    }
+    
+    /* Adjusted font sizes for home section */
+    /* CHANGED: Increased font sizes for the heading */
+    #home-content h2 {
+        font-size: 5rem !important; /* Increased from 4.5rem */
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* CHANGED: Removed horizontal padding and max-width constraints */
+    #home-content p {
+        font-size: 1.75rem !important; /* Increased from 1.5rem */
+        margin-bottom: 1.5rem !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    /* Adjust button sizes */
+    .home-buttons button {
+        font-size: 1.5rem !important; /* Increased from 1.25rem */
+        padding: 1rem 2rem !important; /* Increased padding */
+        margin-right: 0.5rem !important;
+    }
+    
+    /* Adjust info item sizes */
+    .home-info {
+        font-size: 1.5rem !important; /* Increased from 1.25rem */
+    }
+    
+    .home-info i {
+        font-size: 1.75rem !important; /* Increased from 1.5rem */
+    }
+    
+    /* Ensure backdrop covers the scaled content */
+    #home-backdrop {
+        /* CHANGED: Adjusted scale for backdrop */
+        transform: scale(1.05); /* 1 / 0.95 ≈ 1.05 */
+        transform-origin: center;
+        width: 105.26%; /* 100% / 0.95 */
+        left: -2.63%; /* (105.26% - 100%) / 2 */
+    }
+    
+    .tag-filters-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .tag-filter {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+    
+    .menu-item-image {
+        height: 260px;
+        width: 100%;
+        object-fit: cover;
+        /* Default: cut 20% off the top */
+        object-position: 50% calc(var(--image-position-y, 0%) + 55%);
+    }
+
+    /* D-tag: keep custom positioning, no crop */
+    .menu-item-image.d-tag-image {
+        object-position: 50% var(--image-position-y, 0%);
+    }
+
+    /* M-tag: always show the full image */
+    .menu-item-image.m-tag-image {
+        object-fit: contain;   /* ensures full image fits inside */
+        object-position: center;
+        background-color: #000000; /* optional: avoid blank edges showing black */
+    }
+
+    
+    .menu-item-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-item-card .card-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .option-selector {
+        width: 100%;
+        background-color: #222;
+        color: white;
+        border: 1px solid #444;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .item-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    
+    .modal-content {
+        background-color: #1a1a1a;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 1rem;
+        max-width: 600px;
+        width: 90%;
+        position: relative;
+    }
+    
+    .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .modal-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .modal-option {
+        margin-bottom: 1rem;
+    }
+    
+    .modal-option label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: white;
+        font-weight: 600;
+    }
+    
+    .modal-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .modal-buttons button {
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    .add-base {
+        background-color: #ff6a00;
+        color: white;
+        border: none;
+    }
+    
+    .add-chips-drink {
+        background-color: transparent;
+        color: #ff6a00;
+        border: 2px solid #ff6a00;
+    }
+    
+    .drink-selection {
+        display: none;
+        background-color: #222;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .drink-selection label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: white;
+        font-weight: 600;
+    }
+    
+    .add-chips-drink-final {
+        background-color: #ff6a00;
+        color: white;
+        border: none;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    .vegetable-selection {
+        background-color: #222;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .vegetable-selection h4 {
+        color: white;
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .vegetable-checkbox {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .vegetable-checkbox input {
+        margin-right: 0.5rem;
+    }
+    
+    .vegetable-checkbox label {
+        color: white;
+        cursor: pointer;
+    }
+    
+    .home-buttons {
+        justify-content: flex-start;
+    }
+    
+    .home-info {
+        justify-content: flex-start;
+    }
+    
+    .header-logo-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .logo-placeholder {
+        width: 50px;
+        height: 50px;
+        background-color: #ff6a00;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #121212;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 0.5rem 0.75rem;
+        transition: all 0.2s ease;
+    }
+    
+    .nav-link:hover {
+        transform: translateY(-2px);
+    }
+    
+    .header-nav-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    @media (max-width: 767px) {
+        .header-logo-text {
+            display: none;
         }
         
-        @media (min-width: 640px) {
-            #home-content {
-                padding: 0 1.5rem;
-            }
+        .header-nav-container nav {
+            display: none;
         }
         
-        @media (min-width: 768px) {
-            #home-content {
-                padding: 0 2.5rem;
-            }
-        }
-        
-        /* Adjusted font sizes for home section */
-        /* CHANGED: Increased font sizes for the heading */
+        /* CHANGED: Adjusted for mobile responsiveness */
         #home-content h2 {
-            font-size: 5rem !important; /* Increased from 4.5rem */
-            margin-bottom: 1.5rem !important;
+            font-size: 3.5rem !important; /* Increased from 3rem */
         }
         
-        /* CHANGED: Removed horizontal padding and max-width constraints */
         #home-content p {
-            font-size: 1.75rem !important; /* Increased from 1.5rem */
-            margin-bottom: 1.5rem !important;
-            max-width: 100% !important;
-            padding: 0 !important;
+            font-size: 1.4rem !important; /* Increased from 1.2rem */
         }
-        
-        /* Adjust button sizes */
-        .home-buttons button {
-            font-size: 1.5rem !important; /* Increased from 1.25rem */
-            padding: 1rem 2rem !important; /* Increased padding */
-            margin-right: 0.5rem !important;
-        }
-        
-        /* Adjust info item sizes */
-        .home-info {
-            font-size: 1.5rem !important; /* Increased from 1.25rem */
-        }
-        
-        .home-info i {
-            font-size: 1.75rem !important; /* Increased from 1.5rem */
-        }
-        
-        /* Ensure backdrop covers the scaled content */
-        #home-backdrop {
-            /* CHANGED: Adjusted scale for backdrop */
-            transform: scale(1.05); /* 1 / 0.95 ≈ 1.05 */
-            transform-origin: center;
-            width: 105.26%; /* 100% / 0.95 */
-            left: -2.63%; /* (105.26% - 100%) / 2 */
-        }
-        
-        .tag-filters-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .tag-filter {
-            flex: 0 0 auto;
-            white-space: nowrap;
-        }
-        
-        .menu-item-image {
-            height: 260px;
-            width: 100%;
-            object-fit: cover;
-            /* Default: cut 20% off the top */
-            object-position: 50% calc(var(--image-position-y, 0%) + 55%);
-        }
-
-        /* D-tag: keep custom positioning, no crop */
-        .menu-item-image.d-tag-image {
-            object-position: 50% var(--image-position-y, 0%);
-        }
-
-        /* M-tag: always show the full image */
-        .menu-item-image.m-tag-image {
-            object-fit: contain;   /* ensures full image fits inside */
-            object-position: center;
-            background-color: #000000; /* optional: avoid blank edges showing black */
-        }
-
-        
-        .menu-item-card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .menu-item-card .card-content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .option-selector {
-            width: 100%;
-            background-color: #222;
-            color: white;
-            border: 1px solid #444;
-            border-radius: 0.5rem;
-            padding: 0.5rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .item-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            overflow-y: auto;
-        }
-        
-        .modal-content {
-            background-color: #1a1a1a;
-            margin: 2rem auto;
-            padding: 2rem;
-            border-radius: 1rem;
-            max-width: 600px;
-            width: 90%;
-            position: relative;
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        .modal-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .modal-option {
-            margin-bottom: 1rem;
-        }
-        
-        .modal-option label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: white;
-            font-weight: 600;
-        }
-        
-        .modal-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .modal-buttons button {
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        
-        .add-base {
-            background-color: #ff6a00;
-            color: white;
-            border: none;
-        }
-        
-        .add-chips-drink {
-            background-color: transparent;
-            color: #ff6a00;
-            border: 2px solid #ff6a00;
-        }
-        
-        .drink-selection {
-            display: none;
-            background-color: #222;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin-top: 0.5rem;
-        }
-        
-        .drink-selection label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: white;
-            font-weight: 600;
-        }
-        
-        .add-chips-drink-final {
-            background-color: #ff6a00;
-            color: white;
-            border: none;
-            margin-top: 1rem;
-            width: 100%;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        
-        .vegetable-selection {
-            background-color: #222;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .vegetable-selection h4 {
-            color: white;
-            margin-bottom: 0.75rem;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        
-        .vegetable-checkbox {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-        
-        .vegetable-checkbox input {
-            margin-right: 0.5rem;
-        }
-        
-        .vegetable-checkbox label {
-            color: white;
-            cursor: pointer;
-        }
-        
-        .home-buttons {
-            justify-content: flex-start;
-        }
-        
-        .home-info {
-            justify-content: flex-start;
-        }
-        
-        .header-logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .logo-placeholder {
-            width: 50px;
-            height: 50px;
-            background-color: #ff6a00;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #121212;
-        }
-        
-        .nav-link {
-            font-size: 1.1rem;
-            font-weight: 600;
-            padding: 0.5rem 0.75rem;
-            transition: all 0.2s ease;
-        }
-        
-        .nav-link:hover {
-            transform: translateY(-2px);
-        }
-        
-        .header-nav-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        @media (max-width: 767px) {
-            .header-logo-text {
-                display: none;
-            }
-            
-            .header-nav-container nav {
-                display: none;
-            }
-            
-            /* CHANGED: Adjusted for mobile responsiveness */
-            #home-content h2 {
-                font-size: 3.5rem !important; /* Increased from 3rem */
-            }
-            
-            #home-content p {
-                font-size: 1.4rem !important; /* Increased from 1.2rem */
-            }
-        }
-        
+    }
+    
+    .card-input-group {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    @media (min-width: 768px) {
         .card-input-group {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
+            grid-template-columns: 2fr 1fr 1fr;
         }
-        
-        @media (min-width: 768px) {
-            .card-input-group {
-                grid-template-columns: 2fr 1fr 1fr;
-            }
-        }
+    }
 
-        /* NEW: Quantity selector styles - MOVED to be above buttons */
-        .quantity-selector {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 1.5rem 0;
-        }
-        
-        .quantity-selector span {
-            color: white;
-            font-weight: 600;
-        }
-        
-        .quantity-controls {
-            display: flex;
-            align-items: center;
-            background-color: #222;
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-        
-        .quantity-btn {
-            background-color: #333;
-            color: white;
-            border: none;
-            width: 2.5rem;
-            height: 2.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: background-color 0.2s;
-        }
-        
-        .quantity-btn:hover {
-            background-color: #444;
-        }
-        
-        .quantity-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-        
-        .quantity-input {
-            width: 3rem;
-            height: 2.5rem;
-            text-align: center;
-            background-color: #222;
-            color: white;
-            border: none;
-            border-left: 1px solid #444;
-            border-right: 1px solid #444;
-            font-size: 1.1rem;
-            -moz-appearance: textfield;
-        }
-        
-        .quantity-input::-webkit-outer-spin-button,
-        .quantity-input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        
-        /* NEW: Clear cart button styles */
-        .cart-header-actions {
-            display: flex;
-            gap: 12px;
-        }
-        
-        #clear-cart {
-            color: #ff6a00;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 14px;
-            padding: 4px 8px;
-            border-radius: 4px;
-        }
-        
-        #clear-cart:hover {
-            background-color: rgba(255, 106, 0, 0.1);
-        }
-        
-        #clear-cart:disabled {
-            color: #666;
-            cursor: not-allowed;
-        }
-        
-        #clear-cart:disabled:hover {
-            background-color: transparent;
-        }
-    </style>
+    /* NEW: Quantity selector styles - MOVED to be above buttons */
+    .quantity-selector {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1.5rem 0;
+    }
+    
+    .quantity-selector span {
+        color: white;
+        font-weight: 600;
+    }
+    
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        background-color: #222;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+    
+    .quantity-btn {
+        background-color: #333;
+        color: white;
+        border: none;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: background-color 0.2s;
+    }
+    
+    .quantity-btn:hover {
+        background-color: #444;
+    }
+    
+    .quantity-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    
+    .quantity-input {
+        width: 3rem;
+        height: 2.5rem;
+        text-align: center;
+        background-color: #222;
+        color: white;
+        border: none;
+        border-left: 1px solid #444;
+        border-right: 1px solid #444;
+        font-size: 1.1rem;
+        -moz-appearance: textfield;
+    }
+    
+    .quantity-input::-webkit-outer-spin-button,
+    .quantity-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    /* NEW: Clear cart button styles */
+    .cart-header-actions {
+        display: flex;
+        gap: 12px;
+    }
+    
+    #clear-cart {
+        color: #ff6a00;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+    
+    #clear-cart:hover {
+        background-color: rgba(255, 106, 0, 0.1);
+    }
+    
+    #clear-cart:disabled {
+        color: #666;
+        cursor: not-allowed;
+    }
+    
+    #clear-cart:disabled:hover {
+        background-color: transparent;
+    }
+</style>
 </head>
-<body class="bg-[#121212] text-white">
-    <!-- Image Positioning Control Panel (Hidden by default) -->
+
+<body class="bg-[#121212] text-white"> <!-- Image Positioning Control Panel (Hidden by default) -->
     <div class="image-control-panel">
         <h4>Image Vertical Position</h4>
-        <div class="flex items-center">
-            <span class="image-control-value" id="position-value">0%</span>
-            <input type="range" min="-30" max="30" value="0" class="image-control-slider" id="image-position-slider">
-            <button id="reset-position" class="bg-[#ff6a00] text-white text-xs px-2 py-1 rounded">Reset</button>
-        </div>
+        <div class="flex items-center"> <span class="image-control-value" id="position-value">0%</span> <input
+                type="range" min="-30" max="30" value="0" class="image-control-slider" id="image-position-slider">
+            <button id="reset-position" class="bg-[#ff6a00] text-white text-xs px-2 py-1 rounded">Reset</button> </div>
     </div>
 
-    <!-- Item Modal -->
-    <div id="item-modal" class="item-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <img id="modal-image" class="modal-image" src="" alt="">
-            <h2 id="modal-title" class="text-white text-2xl font-bold mb-2"></h2>
-            <p id="modal-description" class="text-gray-400 mb-4"></p>
-            
-            <div id="modal-options">
-                <!-- Options will be inserted here -->
-            </div>
-            
-            <!-- Vegetable Selection Section -->
-            <div id="vegetable-selection" class="vegetable-selection" style="display: none;">
-                <h4>Select Vegetables:</h4>
-                <div class="vegetable-checkbox">
-                    <input type="checkbox" id="vegetable-lettuce" name="vegetables" value="Lettuce">
-                    <label for="vegetable-lettuce">Lettuce</label>
-                </div>
-                <div class="vegetable-checkbox">
-                    <input type="checkbox" id="vegetable-onions" name="vegetables" value="Onions">
-                    <label for="vegetable-onions">Onions</label>
-                </div>
-                <div class="vegetable-checkbox">
-                    <input type="checkbox" id="vegetable-pickles" name="vegetables" value="Pickles">
-                    <label for="vegetable-pickles">Pickles</label>
-                </div>
-                <div class="vegetable-checkbox">
-                    <input type="checkbox" id="vegetable-tomatoes" name="vegetables" value="Tomatoes">
-                    <label for="vegetable-tomatoes">Tomatoes</label>
-                </div>
-                <div class="vegetable-checkbox">
-                    <input type="checkbox" id="vegetable-cucumber" name="vegetables" value="Cucumber">
-                    <label for="vegetable-cucumber">Cucumber</label>
-                </div>
-            </div>
-            
-            <!-- NEW: Quantity Selector MOVED to be above the buttons -->
-            <div class="quantity-selector">
-                <span>Quantity:</span>
-                <div class="quantity-controls">
-                    <button class="quantity-btn decrease-quantity" disabled>-</button>
-                    <input type="number" id="modal-quantity" class="quantity-input" value="1" min="1" max="10">
-                    <button class="quantity-btn increase-quantity">+</button>
-                </div>
-            </div>
-            
-            <div class="modal-buttons">
-                <button id="modal-add-base" class="add-base">Add to Cart - £<span id="modal-base-price">0.00</span></button>
-                <button id="modal-add-chips-drink" class="add-chips-drink">Add Chips and Drink - £<span id="modal-chips-drink-price">0.00</span></button>
-                <div id="drink-selection" class="drink-selection">
-                    <label for="drink-select">Select a drink:</label>
-                    <select id="drink-select" class="option-selector">
-                        <option value="Sprite">Sprite</option>
-                        <option value="Pepsi">Pepsi</option>
-                        <option value="Tango Orange">Tango Orange</option>
-                        <option value="Tango Mango">Tango Mango</option>
-                        <option value="Vimto">Vimto</option>
-                        <option value="KA sparkling fruit punch">KA sparkling fruit punch</option>
-                    </select>
-                    <button id="modal-add-chips-drink-final" class="add-chips-drink-final">Add Chips and Drink - £<span id="modal-final-price">0.00</span></button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Overlay -->
-    <div class="overlay fixed inset-0 bg-black bg-opacity-50 z-40"></div>
-    
-    <!-- Cart Drawer -->
-    <div class="cart-drawer fixed top-0 right-0 h-full w-80 bg-[#1a1a1a] shadow-lg z-50">
-        <div class="p-4 border-b border-[#222222] flex justify-between items-center">
-            <h2 class="text-white font-semibold text-lg">Your Cart</h2>
-            <div class="cart-header-actions">
-                <button id="clear-cart" class="text-[#ff6a00] hover:text-[#e05a00] disabled:text-gray-500 disabled:cursor-not-allowed" disabled>
-                    Clear All
-                </button>
-                <button id="close-cart" class="text-white">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-        <div class="p-4 overflow-y-auto h-full pb-32">
-            <ul id="cart-items" class="space-y-3">
-                <!-- Cart items will be added here dynamically -->
-            </ul>
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 p-4 bg-[#1a1a1a] border-t border-[#222222]">
-            <div class="flex justify-between text-white mb-2 text-base">
-                <span class="font-semibold">Subtotal:</span>
-                <span id="cart-subtotal">£0.00</span>
-            </div>
-            <button id="checkout-button" class="w-full bg-[#ff6a00] text-white text-base font-semibold rounded py-3 hover:bg-[#e05a00]">
-                Checkout
-            </button>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div id="main-content">
-        <!-- Updated Header with Logo Placeholder and Enhanced Navigation -->
-        <header class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 bg-[#121212] border-b border-[#222222] sticky top-0 z-30">
-            <div class="header-logo-container">
-                <!-- CHANGED: Replaced text logo with image -->
-                <img src="Logo.png" alt="Kebab O'Clock" class="h-12">
-            </div>
-            <!-- Navigation and Cart Container -->
-            <div class="header-nav-container">
-                <nav class="hidden md:flex space-x-4 text-white items-center">
-                    <a class="hover:text-[#ff6a00] nav-link active-section" href="#home">Home</a>
-                    <a class="hover:text-[#ff6a00] nav-link" href="#menu">Menu</a>
-                    <a class="hover:text-[#ff6a00] nav-link" href="#about">About</a>
-                    <a class="hover:text-[#ff6a00] nav-link" href="#contact">Contact</a>
-                </nav>
-                <button id="cart-button" class="flex items-center space-x-2 bg-[#ff6a00] text-base font-semibold rounded px-4 py-2 hover:bg-[#e05a00]">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="cart-count">Cart (0)</span>
-                </button>
-            </div>
-        </header>
-
-        <main>
-            <!-- Home Section - Updated Structure with correct ID and left-aligned content -->
-            <section id="home">
-                <div id="home-backdrop"></div>
-                <div id="home-content" class="py-12 md:py-24">
-                    <div class="max-w-4xl">
-                        <!-- CHANGED: Increased font sizes for the heading -->
-                        <h2 class="text-white text-6xl sm:text-7xl md:text-8xl font-extrabold leading-tight mb-8">
-                            <span class="righteous-font block mb-2">WHERE FLAVOUR</span>
-                            <span class="text-[#ff6a00] righteous-font block">MEETS TIME</span>
-                        </h2>
-                        <!-- CHANGED: Removed horizontal padding classes -->
-                        <p class="lato-font text-xl sm:text-2xl md:text-3xl text-gray-300 mb-12 leading-relaxed w-full">
-                            Experience authentic kebabs, burgers and shawarma crafted with passion. Fresh ingredients, bold flavors, and unbeatable taste - available 12PM till 2AM daily.
-                        </p>
-                            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 mb-6 home-buttons">
-                                <button id="order-now-btn" class="bg-[#ff6a00] text-black text-lg sm:text-xl font-semibold rounded-xl px-8 py-4 hover:bg-[#e05a00] transition-colors">
-                                    Order Now
-                                </button>
-                                <button id="view-menu-btn" class="bg-black text-white border-2 border-[#ff6a00] text-lg sm:text-xl font-semibold rounded-xl px-10 py-4 hover:bg-[#ff6a00] hover:text-black transition-colors">
-                                    View Menu
-                                </button>
-                            </div>
-                        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-12 text-xl sm:text-2xl text-gray-300 font-semibold home-info">
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-star text-[#ff6a00] text-2xl"></i>
-                                <span>4.8 Rating</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-clock text-[#ff6a00] text-2xl"></i>
-                                <span>12PM - 2AM Daily</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Menu Section -->
-            <section id="menu" class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-20">
-                <h3 class="text-center font-semibold text- text-3xl lg:text-6xl mb-4 righteous-font">OUR MENU</h3>
-                <p class="text-center text-gray-400 text-lg sm:text-xl mb-12">Discover our delicious selection of kebabs, burgers and more</p>
-                
-                <!-- Search and Filters -->
-                <div class="mb-12">
-                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <div class="relative w-full sm:w-80">
-                            <input type="text" id="search-input" placeholder="Search menu items..." class="w-full bg-[#1a1a1a] text-white text-lg rounded-xl py-3 px-5 pl-12 focus:outline-none focus:ring-2 focus:ring-[#ff6a00]">
-                            <i class="fas fa-search absolute left-4 top-3.5 text-gray-400 text-lg"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <h4 class="text-center text-white text-xl mb-4">Filter by Category</h4>
-                        <div class="tag-filters-container">
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black active" data-tag="all">All</button>
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Beefy-Tastic">Beefy-Tastic</button>
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Chicken menu">Chicken menu</button>
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Don-Shawarma">Don-Shawarma</button>
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Grilled-Tastic">Grilled-Tastic</button>
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Veggie-Tastic">Veggie-Tastic</button>
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Wrap-Tastic">Wrap-Tastic</button>
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Wings/tenders">Wings/tenders</button>
-                            <!-- Combined category filters -->
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Drinks & Milkshakes">Drinks & Milkshakes</button>
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Addons & Sauces">Addons & Sauces</button>
-                            <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Loaded Fries">Loaded Fries</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    <!-- Menu items will be loaded dynamically from JSON -->
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about" class="max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-20 text-center text-lg sm:text-xl text-gray-400 leading-relaxed">
-                <h3 class="font-semibold text-white text-3xl sm:text-4xl mb-8">Our Story</h3>
-                <p class="mb-8">
-                    Kebab O'Clock was built on one simple belief: good food makes every moment better. Starting in the heart of Houndslow, we wanted to craft a dining experience where bold flavors, fresh ingredients, and unbeatable taste come together under one roof.
-                </p>
-                <p class="mb-8">
-                    Our chefs pour passion into every bite—grilling, stacking, and wrapping your favorites to perfection. Whether you're craving a loaded doner, a smoky shawarma, or a burger that's stacked high and dripping with flavor, you'll find it here.
-                </p>
-                <p>
-                    We're not just serving fast food—we're serving quality, comfort, and flavor that keeps you coming back for more. At Kebab O'Clock, there's no wrong time to treat yourself.
-                </p>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-20 text-center text-lg sm:text-xl text-gray-400 leading-relaxed">
-            <h3 class="font-semibold text-white text-3xl sm:text-4xl mb-8">Visit Us</h3>
-            <p class="mb-12 text-2xl">Come and experience the taste of authentic kebabs</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-8">
-                
-                <!-- Whole address card clickable -->
-                <a href="https://maps.app.goo.gl/BQyKUCf2AcjfTWvT9" target="_blank"
-                class="bg-[#1a1a1a] rounded-xl p-8 w-full sm:w-64 text-lg block hover:bg-[#222] transition-colors">
-                <i class="fas fa-map-marker-alt text-[#ff6a00] text-3xl mb-4"></i>
-                <p>
-                    472 Great West Road<br>
-                    Hounslow, England<br>
-                    TW5 0JA
-                </p>
-                </a>
-
-                <div class="bg-[#1a1a1a] rounded-xl p-8 w-full sm:w-64 text-lg">
-                <i class="fas fa-phone-alt text-[#ff6a00] text-3xl mb-4"></i>
-                <p>+44 20 7998 6050</p>
-                </div>
-
-                <div class="bg-[#1a1a1a] rounded-xl p-8 w-full sm:w-64 text-lg">
-                <i class="fas fa-clock text-[#ff6a00] text-3xl mb-4"></i>
-                <p>
-                    MON - SUN<br>
-                    <span class="font-bold">12PM TIL 2AM</span>
-                </p>
-                </div>
-            </div>
-            </section>
-
-        </main>
-
-        <footer class="bg-[#0a0a0a] border-t border-[#222222] py-6 px-4 sm:px-6 md:px-10 text-lg text-[#ff6a00] font-semibold flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto">
-            <div class="mb-4 sm:mb-0">Kebab O'Clock</div>
-            <div class="text-gray-500 text-base">© 2023 Kebab O'Clock. All rights reserved.</div>
-        </footer>
-    </div>
-
-    <!-- Checkout Page -->
-    <div id="checkout-page" class="checkout-page max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8 text-center">Checkout</h2>
+<!-- Item Modal -->
+<div id="item-modal" class="item-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img id="modal-image" class="modal-image" src="" alt="">
+        <h2 id="modal-title" class="text-white text-2xl font-bold mb-2"></h2>
+        <p id="modal-description" class="text-gray-400 mb-4"></p>
         
-        <!-- Order Summary -->
-        <div class="bg-[#1a1a1a] rounded-xl p-8 mb-8">
-            <h3 class="text-2xl font-semibold text-white mb-6">Order Summary</h3>
-            <div id="checkout-items" class="space-y-4 mb-6">
-                <!-- Items will be populated here -->
+        <div id="modal-options">
+            <!-- Options will be inserted here -->
+        </div>
+        
+        <!-- Vegetable Selection Section -->
+        <div id="vegetable-selection" class="vegetable-selection" style="display: none;">
+            <h4>Select Vegetables:</h4>
+            <div class="vegetable-checkbox">
+                <input type="checkbox" id="vegetable-lettuce" name="vegetables" value="Lettuce">
+                <label for="vegetable-lettuce">Lettuce</label>
             </div>
-            <div class="border-t border-[#333] pt-6">
-                <div class="flex justify-between text-xl text-white">
-                    <span class="font-semibold">Total:</span>
-                    <span id="checkout-total" class="font-bold">£0.00</span>
-                </div>
+            <div class="vegetable-checkbox">
+                <input type="checkbox" id="vegetable-onions" name="vegetables" value="Onions">
+                <label for="vegetable-onions">Onions</label>
+            </div>
+            <div class="vegetable-checkbox">
+                <input type="checkbox" id="vegetable-pickles" name="vegetables" value="Pickles">
+                <label for="vegetable-pickles">Pickles</label>
+            </div>
+            <div class="vegetable-checkbox">
+                <input type="checkbox" id="vegetable-tomatoes" name="vegetables" value="Tomatoes">
+                <label for="vegetable-tomatoes">Tomatoes</label>
+            </div>
+            <div class="vegetable-checkbox">
+                <input type="checkbox" id="vegetable-cucumber" name="vegetables" value="Cucumber">
+                <label for="vegetable-cucumber">Cucumber</label>
             </div>
         </div>
         
-        <!-- Checkout Form -->
-        <form id="checkout-form" class="bg-[#1a1a1a] rounded-xl p-8">
-            <h3 class="text-2xl font-semibold text-white mb-8">Customer Information</h3>
-            
-            <!-- NEW: Delivery Type Dropdown -->
-            <div class="mb-6">
-                <label for="delivery-type" class="block text-white mb-3 text-lg">Order Type</label>
-                <select id="delivery-type" class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg">
-                    <option value="">Select order type...</option>
-                    <option value="collection">Collection</option>
+        <!-- NEW: Quantity Selector MOVED to be above the buttons -->
+        <div class="quantity-selector">
+            <span>Quantity:</span>
+            <div class="quantity-controls">
+                <button class="quantity-btn decrease-quantity" disabled>-</button>
+                <input type="number" id="modal-quantity" class="quantity-input" value="1" min="1" max="10">
+                <button class="quantity-btn increase-quantity">+</button>
+            </div>
+        </div>
+        
+        <div class="modal-buttons">
+            <button id="modal-add-base" class="add-base">Add to Cart - £<span id="modal-base-price">0.00</span></button>
+            <button id="modal-add-chips-drink" class="add-chips-drink">Add Chips and Drink - £<span id="modal-chips-drink-price">0.00</span></button>
+            <div id="drink-selection" class="drink-selection">
+                <label for="drink-select">Select a drink:</label>
+                <select id="drink-select" class="option-selector">
+                    <option value="Sprite">Sprite</option>
+                    <option value="Pepsi">Pepsi</option>
+                    <option value="Tango Orange">Tango Orange</option>
+                    <option value="Tango Mango">Tango Mango</option>
+                    <option value="Vimto">Vimto</option>
+                    <option value="KA sparkling fruit punch">KA sparkling fruit punch</option>
                 </select>
-                <p class="text-amber-500 text-sm mt-2 font-semibold"> </p>  <!-- Note replaced Collection only Keep for later -->
-            </div>
-
-            <!-- NEW: Container for fields that will be shown on selection -->
-            <div id="details-container" style="display: none;">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label for="full-name" class="block text-white mb-3 text-lg">Full Name</label>
-                        <input type="text" id="full-name" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input">
-                    </div>
-                    <div>
-                        <label for="phone" class="block text-white mb-3 text-lg">Phone Number</label>
-                        <input type="tel" id="phone" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input">
-                    </div>
-                </div>
-                
-                <div class="mb-6">
-                    <label for="email" class="block text-white mb-3 text-lg">Email Address</label>
-                    <input type="email" id="email" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input">
-                </div>
-                
-                <!-- Card Details Section -->
-                <div class="mb-6">
-                    <label class="block text-white mb-3 text-lg">Card Details</label>
-                    <div class="card-input-group">
-                        <div>
-                            <input type="text" id="card-number" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input" placeholder="Card Number">
-                        </div>
-                        <div>
-                            <input type="text" id="card-expiry" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input" placeholder="MM/YY">
-                        </div>
-                        <div>
-                            <input type="text" id="card-cvv" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input" placeholder="CVV">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mb-8">
-                    <label for="special-instructions" class="block text-white mb-3 text-lg">Special Instructions (Optional)</label>
-                    <textarea id="special-instructions" class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] h-24 text-lg"></textarea>
-                </div>
-            </div>
-            
-            <button type="submit" id="place-order-btn" class="w-full bg-[#ff6a00] text-white text-xl font-bold rounded-lg py-4 hover:bg-[#e05a00] disabled:bg-gray-600 disabled:cursor-not-allowed" disabled>
-                Place Order – £0.00
-            </button>
-        </form>
-        
-        <div class="text-center mt-8">
-            <button id="back-to-menu" class="text-[#ff6a00] hover:underline text-lg">
-                ← Back to Menu
-            </button>
-        </div>
-    </div>
-
-    <!-- Order Confirmation Modal -->
-    <div id="order-confirmation" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-        <div class="bg-[#1a1a1a] rounded-xl p-8 max-w-md w-full mx-4">
-            <div class="text-center">
-                <i class="fas fa-check-circle text-[#ff6a00] text-5xl mb-4"></i>
-                <h3 class="text-2xl font-bold text-white mb-2">Order Confirmed!</h3>
-                <p class="text-gray-300 mb-6" id="confirmation-message">Thank you for your order. We'll start preparing it right away.</p>
-                <button id="confirm-ok" class="bg-[#ff6a00] text-white font-semibold rounded-lg px-6 py-3 hover:bg-[#e05a00]">
-                    OK
-                </button>
+                <button id="modal-add-chips-drink-final" class="add-chips-drink-final">Add Chips and Drink - £<span id="modal-final-price">0.00</span></button>
             </div>
         </div>
     </div>
+</div>
 
-    <script>
-        // Leave empty for now. When backend is ready, put its URL here.
-        const API_BASE = ''; // e.g. 'https://api.yoursite.com'
+<!-- Overlay -->
+<div class="overlay fixed inset-0 bg-black bg-opacity-50 z-40"></div>
 
-        // Helper: returns either the local file or the API endpoint.
-        function getJsonUrl(file) {
-        return API_BASE ? `${API_BASE}/${file}` : file;
-        }
+<!-- Cart Drawer -->
+<div class="cart-drawer fixed top-0 right-0 h-full w-80 bg-[#1a1a1a] shadow-lg z-50">
+    <div class="p-4 border-b border-[#222222] flex justify-between items-center">
+        <h2 class="text-white font-semibold text-lg">Your Cart</h2>
+        <div class="cart-header-actions">
+            <button id="clear-cart" class="text-[#ff6a00] hover:text-[#e05a00] disabled:text-gray-500 disabled:cursor-not-allowed" disabled>
+                Clear All
+            </button>
+            <button id="close-cart" class="text-white">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <div class="p-4 overflow-y-auto h-full pb-32">
+        <ul id="cart-items" class="space-y-3">
+            <!-- Cart items will be added here dynamically -->
+        </ul>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 p-4 bg-[#1a1a1a] border-t border-[#222222]">
+        <div class="flex justify-between text-white mb-2 text-base">
+            <span class="font-semibold">Subtotal:</span>
+            <span id="cart-subtotal">£0.00</span>
+        </div>
+        <button id="checkout-button" class="w-full bg-[#ff6a00] text-white text-base font-semibold rounded py-3 hover:bg-[#e05a00]">
+            Checkout
+        </button>
+    </div>
+</div>
 
-        // NEW: Maximum quantity per item (easily changeable)
-        const MAX_QUANTITY_PER_ITEM = 10;
+<!-- Main Content -->
+<div id="main-content">
+    <!-- Updated Header with Logo Placeholder and Enhanced Navigation -->
+    <header class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 bg-[#121212] border-b border-[#222222] sticky top-0 z-30">
+        <div class="header-logo-container">
+            <!-- CHANGED: Replaced text logo with image -->
+            <img src="Logo.png" alt="Kebab O'Clock" class="h-12">
+        </div>
+        <!-- Navigation and Cart Container -->
+        <div class="header-nav-container">
+            <nav class="hidden md:flex space-x-4 text-white items-center">
+                <a class="hover:text-[#ff6a00] nav-link active-section" href="#home">Home</a>
+                <a class="hover:text-[#ff6a00] nav-link" href="#menu">Menu</a>
+                <a class="hover:text-[#ff6a00] nav-link" href="#about">About</a>
+                <a class="hover:text-[#ff6a00] nav-link" href="#contact">Contact</a>
+            </nav>
+            <button id="cart-button" class="flex items-center space-x-2 bg-[#ff6a00] text-base font-semibold rounded px-4 py-2 hover:bg-[#e05a00]">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">Cart (0)</span>
+            </button>
+        </div>
+    </header>
 
-        // Sauce options (unchanged)
-        const sauceOptions = {
-            "Beefy-Tastic": ["Burger Blast", "Butter Ranch", "Garlic Gurb", "Habanero Mayo", "Siracha Heat", "Smookey BBQ", "Tomato Splash", "Buffalo Kick", "Mango Habenero"],
-            "Chicken menu": ["Burger Blast", "Butter Ranch", "Garlic Gurb", "Habanero Mayo", "Siracha Heat", "Smookey BBQ", "Tomato Splash", "Buffalo Kick", "Mango Habenero"],
-            "Grilled-Tastic": ["Mango & Lime", "Medium Peri Peri", "Hot Peri Peri"],
-            "Wrap-Tastic": ["Garlic Herb Mayo", "Sticky BBQ", "Buffalo Kick"],
-            "Wings/tenders": ["Mango & Lime", "Korean BBQ", "Peri Peri", "Mango Habanero", "Hot Honey Siracha", "Buffalo Kick"],
-            "Veggie-Tastic": ["Garlic Mayo", "Sweet Chilli", "BBQ", "Ketchup", "Mayonnaise"]
-        };
+    <main>
+        <!-- Home Section - Updated Structure with correct ID and left-aligned content -->
+        <section id="home">
+            <div id="home-backdrop"></div>
+            <div id="home-content" class="py-12 md:py-24">
+                <div class="max-w-4xl">
+                    <!-- CHANGED: Increased font sizes for the heading -->
+                    <h2 class="text-white text-6xl sm:text-7xl md:text-8xl font-extrabold leading-tight mb-8">
+                        <span class="righteous-font block mb-2">WHERE FLAVOUR</span>
+                        <span class="text-[#ff6a00] righteous-font block">MEETS TIME</span>
+                    </h2>
+                    <!-- CHANGED: Removed horizontal padding classes -->
+                    <p class="lato-font text-xl sm:text-2xl md:text-3xl text-gray-300 mb-12 leading-relaxed w-full">
+                        Experience authentic kebabs, burgers and shawarma crafted with passion. Fresh ingredients, bold flavors, and unbeatable taste - available 12PM till 2AM daily.
+                    </p>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 mb-6 home-buttons">
+                            <button id="order-now-btn" class="bg-[#ff6a00] text-black text-lg sm:text-xl font-semibold rounded-xl px-8 py-4 hover:bg-[#e05a00] transition-colors">
+                                Order Now
+                            </button>
+                            <button id="view-menu-btn" class="bg-black text-white border-2 border-[#ff6a00] text-lg sm:text-xl font-semibold rounded-xl px-10 py-4 hover:bg-[#ff6a00] hover:text-black transition-colors">
+                                View Menu
+                            </button>
+                        </div>
+                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-12 text-xl sm:text-2xl text-gray-300 font-semibold home-info">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-star text-[#ff6a00] text-2xl"></i>
+                            <span>4.8 Rating</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-[#ff6a00] text-2xl"></i>
+                            <span>12PM - 2AM Daily</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        // Drinks options (unchanged)
-        const drinkOptions = [
-            "Sprite", "Pepsi", "Tango Orange", "Tango Mango", "Vimto", "KA sparkling fruit punch"
-        ];
-
-        // Vegetables options (unchanged)
-        const vegetableOptions = [
-            "Lettuce", "Onions", "Pickles", "Tomatoes", "Cucumber"
-        ];
-
-        // JSON files to load (must be placed in the same folder as index_fixed_dm.html)
-        const jsonFiles = [
-            "beefy-tastic.json",
-            "chicken-menu.json",
-            "veggie-tastic.json",
-            "grilled-tastic.json",
-            "wrap-tastic.json",
-            "don-shawarma.json",
-            "wings-tenders.json",
-            "loaded-fries.json",
-            "drinks-milkshakes.json",
-            "addons-sauces.json"
-        ];
-
-        let menuData = {};
-
-        // Load all external JSON files
-        async function loadAllJSON() {
-            for (const file of jsonFiles) {
-                try {
-                    const response = await fetch(getJsonUrl(file));
-                    if (!response.ok) throw new Error(`Failed to load ${file}`);
-                    const data = await response.json();
-                    menuData[file] = data;
-                } catch (err) {
-                    console.error(`Error loading ${file}:`, err);
-                }
-            }
-        }
-
-        // Cart functionality
-        let cart = [];
-        const cartButton = document.getElementById('cart-button');
-        const closeCart = document.getElementById('close-cart');
-        const cartDrawer = document.querySelector('.cart-drawer');
-        const overlay = document.querySelector('.overlay');
-        const cartItems = document.getElementById('cart-items');
-        const cartSubtotal = document.getElementById('cart-subtotal');
-        const cartCount = document.getElementById('cart-count');
-        const menuContainer = document.getElementById('menu-container');
-        const searchInput = document.getElementById('search-input');
-        const tagFilters = document.querySelectorAll('.tag-filter');
-        const checkoutButton = document.getElementById('checkout-button');
-        const orderNowButton = document.getElementById('order-now-btn');
-        const viewMenuButton = document.getElementById('view-menu-btn');
-        const mainContent = document.getElementById('main-content');
-        const checkoutPage = document.getElementById('checkout-page');
-        const backToMenuButton = document.getElementById('back-to-menu');
-        const checkoutItems = document.getElementById('checkout-items');
-        const checkoutTotal = document.getElementById('checkout-total');
-        const placeOrderButton = document.getElementById('place-order-btn');
-        const checkoutForm = document.getElementById('checkout-form');
-        const orderConfirmation = document.getElementById('order-confirmation');
-        const confirmOkButton = document.getElementById('confirm-ok');
-        
-        // NEW: Checkout form elements
-        const deliveryTypeDropdown = document.getElementById('delivery-type');
-        const detailsContainer = document.getElementById('details-container');
-        const checkoutInputs = document.querySelectorAll('.checkout-input');
-
-        // Modal elements
-        const itemModal = document.getElementById('item-modal');
-        const modalImage = document.getElementById('modal-image');
-        const modalTitle = document.getElementById('modal-title');
-        const modalDescription = document.getElementById('modal-description');
-        const modalOptions = document.getElementById('modal-options');
-        const modalBasePrice = document.getElementById('modal-base-price');
-        const modalChipsDrinkPrice = document.getElementById('modal-chips-drink-price');
-        const modalFinalPrice = document.getElementById('modal-final-price');
-        const modalAddBase = document.getElementById('modal-add-base');
-        const modalAddChipsDrink = document.getElementById('modal-add-chips-drink');
-        const drinkSelection = document.getElementById('drink-selection');
-        const drinkSelect = document.getElementById('drink-select');
-        const modalAddChipsDrinkFinal = document.getElementById('modal-add-chips-drink-final');
-        const closeModal = document.querySelector('.close-modal');
-        const vegetableSelection = document.getElementById('vegetable-selection');
-        
-        // NEW: Quantity selector elements
-        const quantityInput = document.getElementById('modal-quantity');
-        const decreaseQuantityBtn = document.querySelector('.decrease-quantity');
-        const increaseQuantityBtn = document.querySelector('.increase-quantity');
-        
-        // Image positioning controls
-        const imagePositionSlider = document.getElementById('image-position-slider');
-        const positionValue = document.getElementById('position-value');
-        const resetPositionButton = document.getElementById('reset-position');
-        const imageControlPanel = document.querySelector('.image-control-panel');
-
-        // NEW: Clear cart button
-        const clearCartButton = document.getElementById('clear-cart');
-
-        // Current item being viewed in modal
-        let currentModalItem = null;
-
-        // Load menu items from JSON data
-        function loadMenuItems() {
-            let allItems = [];
-            let showSliderPanel = false;
+        <!-- Menu Section -->
+        <section id="menu" class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-20">
+            <h3 class="text-center font-semibold text- text-3xl lg:text-6xl mb-4 righteous-font">OUR MENU</h3>
+            <p class="text-center text-gray-400 text-lg sm:text-xl mb-12">Discover our delicious selection of kebabs, burgers and more</p>
             
-            // Simulate loading from multiple JSON files
-            for (const fileName in menuData) {
-                if (menuData.hasOwnProperty(fileName)) {
-                    allItems = allItems.concat(menuData[fileName].items);
-                    
-                    // Check if any item has showSlider set to true
-                    if (menuData[fileName].items.some(item => item.showSlider)) {
-                        showSliderPanel = true;
-                    }
-                }
-            }
-            
-            // Show slider panel if any item has showSlider: true
-            if (showSliderPanel) {
-                imageControlPanel.style.display = 'block';
-            }
-            
-            renderMenuItems(allItems);
-        }
-
-        // Render menu items to the page
-        function renderMenuItems(items) {
-            menuContainer.innerHTML = '';
-            
-            if (items.length === 0) {
-                menuContainer.innerHTML = '<p class="text-center text-gray-400 col-span-full py-8 text-lg">No menu items found matching your criteria.</p>';
-                return;
-            }
-            
-            items.forEach(item => {
-                const article = document.createElement('article');
-                article.className = 'bg-[#1a1a1a] rounded-xl overflow-hidden shadow-md text-base menu-item-card';
+            <!-- Search and Filters -->
+            <div class="mb-12">
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <div class="relative w-full sm:w-80">
+                        <input type="text" id="search-input" placeholder="Search menu items..." class="w-full bg-[#1a1a1a] text-white text-lg rounded-xl py-3 px-5 pl-12 focus:outline-none focus:ring-2 focus:ring-[#ff6a00]">
+                        <i class="fas fa-search absolute left-4 top-3.5 text-gray-400 text-lg"></i>
+                    </div>
+                </div>
                 
-                // Check if item has options
-                const hasOptions = item.options && item.options.length > 0;
+                <div class="mt-8">
+                    <h4 class="text-center text-white text-xl mb-4">Filter by Category</h4>
+                    <div class="tag-filters-container">
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black active" data-tag="all">All</button>
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Beefy-Tastic">Beefy-Tastic</button>
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Chicken menu">Chicken menu</button>
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Don-Shawarma">Don-Shawarma</button>
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Grilled-Tastic">Grilled-Tastic</button>
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Veggie-Tastic">Veggie-Tastic</button>
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Wrap-Tastic">Wrap-Tastic</button>
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Wings/tenders">Wings/tenders</button>
+                        <!-- Combined category filters -->
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Drinks & Milkshakes">Drinks & Milkshakes</button>
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Addons & Sauces">Addons & Sauces</button>
+                        <button class="tag-filter text-sm bg-[#1a1a1a] text-white px-5 py-2.5 rounded-lg hover:bg-[#ff6a00] hover:text-black" data-tag="Loaded Fries">Loaded Fries</button>
+                    </div>
+                </div>
+            </div>
 
-                // Check tags separately
-                const hasDTag = item.tags.includes("D");
-                const hasMTag = item.tags.includes("M");
+            <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Menu items will be loaded dynamically from JSON -->
+            </div>
+        </section>
 
-                article.innerHTML = `
-                    <div class="relative">
-                        <img 
-                            alt="${item.name}" 
-                            class="menu-item-image ${hasDTag ? 'd-tag-image' : ''} ${hasMTag ? 'm-tag-image' : ''}" 
-                            src="${item.image}">
-                        <span class="absolute top-3 left-3 bg-[#ff6a00] text-xs font-semibold uppercase rounded px-2 py-1">
-                            ${item.tags[0]}
+        <!-- About Section -->
+        <section id="about" class="max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-20 text-center text-lg sm:text-xl text-gray-400 leading-relaxed">
+            <h3 class="font-semibold text-white text-3xl sm:text-4xl mb-8">Our Story</h3>
+            <p class="mb-8">
+                Kebab O'Clock was built on one simple belief: good food makes every moment better. Starting in the heart of Houndslow, we wanted to craft a dining experience where bold flavors, fresh ingredients, and unbeatable taste come together under one roof.
+            </p>
+            <p class="mb-8">
+                Our chefs pour passion into every bite—grilling, stacking, and wrapping your favorites to perfection. Whether you're craving a loaded doner, a smoky shawarma, or a burger that's stacked high and dripping with flavor, you'll find it here.
+            </p>
+            <p>
+                We're not just serving fast food—we're serving quality, comfort, and flavor that keeps you coming back for more. At Kebab O'Clock, there's no wrong time to treat yourself.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-20 text-center text-lg sm:text-xl text-gray-400 leading-relaxed">
+        <h3 class="font-semibold text-white text-3xl sm:text-4xl mb-8">Visit Us</h3>
+        <p class="mb-12 text-2xl">Come and experience the taste of authentic kebabs</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-8">
+            
+            <!-- Whole address card clickable -->
+            <a href="https://maps.app.goo.gl/BQyKUCf2AcjfTWvT9" target="_blank"
+            class="bg-[#1a1a1a] rounded-xl p-8 w-full sm:w-64 text-lg block hover:bg-[#222] transition-colors">
+            <i class="fas fa-map-marker-alt text-[#ff6a00] text-3xl mb-4"></i>
+            <p>
+                472 Great West Road<br>
+                Hounslow, England<br>
+                TW5 0JA
+            </p>
+            </a>
+
+            <div class="bg-[#1a1a1a] rounded-xl p-8 w-full sm:w-64 text-lg">
+            <i class="fas fa-phone-alt text-[#ff6a00] text-3xl mb-4"></i>
+            <p>+44 20 7998 6050</p>
+            </div>
+
+            <div class="bg-[#1a1a1a] rounded-xl p-8 w-full sm:w-64 text-lg">
+            <i class="fas fa-clock text-[#ff6a00] text-3xl mb-4"></i>
+            <p>
+                MON - SUN<br>
+                <span class="font-bold">12PM TIL 2AM</span>
+            </p>
+            </div>
+        </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#0a0a0a] border-t border-[#222222] py-6 px-4 sm:px-6 md:px-10 text-lg text-[#ff6a00] font-semibold flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto">
+        <div class="mb-4 sm:mb-0">Kebab O'Clock</div>
+        <div class="text-gray-500 text-base">© 2023 Kebab O'Clock. All rights reserved.</div>
+    </footer>
+</div>
+
+<!-- Checkout Page -->
+<div id="checkout-page" class="checkout-page max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-12">
+    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8 text-center">Checkout</h2>
+    
+    <!-- Order Summary -->
+    <div class="bg-[#1a1a1a] rounded-xl p-8 mb-8">
+        <h3 class="text-2xl font-semibold text-white mb-6">Order Summary</h3>
+        <div id="checkout-items" class="space-y-4 mb-6">
+            <!-- Items will be populated here -->
+        </div>
+        <div class="border-t border-[#333] pt-6">
+            <div class="flex justify-between text-xl text-white">
+                <span class="font-semibold">Total:</span>
+                <span id="checkout-total" class="font-bold">£0.00</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Checkout Form -->
+    <form id="checkout-form" class="bg-[#1a1a1a] rounded-xl p-8">
+        <h3 class="text-2xl font-semibold text-white mb-8">Customer Information</h3>
+        
+        <!-- NEW: Delivery Type Dropdown -->
+        <div class="mb-6">
+            <label for="delivery-type" class="block text-white mb-3 text-lg">Order Type</label>
+            <select id="delivery-type" class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg">
+                <option value="">Select order type...</option>
+                <option value="collection">Collection</option>
+            </select>
+            <p class="text-amber-500 text-sm mt-2 font-semibold"> </p>  <!-- Note replaced Collection only Keep for later -->
+        </div>
+
+        <!-- NEW: Container for fields that will be shown on selection -->
+        <div id="details-container" style="display: none;">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label for="full-name" class="block text-white mb-3 text-lg">Full Name</label>
+                    <input type="text" id="full-name" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input">
+                </div>
+                <div>
+                    <label for="phone" class="block text-white mb-3 text-lg">Phone Number</label>
+                    <input type="tel" id="phone" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input">
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <label for="email" class="block text-white mb-3 text-lg">Email Address</label>
+                <input type="email" id="email" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input">
+            </div>
+            
+            <!-- Card Details Section -->
+            <div class="mb-6">
+                <label class="block text-white mb-3 text-lg">Card Details</label>
+                <div class="card-input-group">
+                    <div>
+                        <input type="text" id="card-number" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input" placeholder="Card Number">
+                    </div>
+                    <div>
+                        <input type="text" id="card-expiry" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input" placeholder="MM/YY">
+                    </div>
+                    <div>
+                        <input type="text" id="card-cvv" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg checkout-input" placeholder="CVV">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <label for="special-instructions" class="block text-white mb-3 text-lg">Special Instructions (Optional)</label>
+                <textarea id="special-instructions" class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] h-24 text-lg"></textarea>
+            </div>
+        </div>
+        <!-- NEW: Pickup Time Selector -->
+        <div class="mb-8" id="pickup-time-container" style="display: none;">
+        <label for="pickup-time" class="block text-white mb-3 text-lg">Select Pickup Time</label>
+        <select id="pickup-time" required class="w-full bg-[#222] text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[#ff6a00] text-lg">
+            <option value="">Loading times...</option>
+        </select>
+        </div>            
+        <button type="submit" id="place-order-btn" class="w-full bg-[#ff6a00] text-white text-xl font-bold rounded-lg py-4 hover:bg-[#e05a00] disabled:bg-gray-600 disabled:cursor-not-allowed" disabled>
+            Place Order – £0.00
+        </button>
+    </form>
+    
+    <div class="text-center mt-8">
+        <button id="back-to-menu" class="text-[#ff6a00] hover:underline text-lg">
+            ← Back to Menu
+        </button>
+    </div>
+</div>
+
+<!-- Order Confirmation Modal -->
+<div id="order-confirmation" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="bg-[#1a1a1a] rounded-xl p-8 max-w-md w-full mx-4">
+        <div class="text-center">
+            <i class="fas fa-check-circle text-[#ff6a00] text-5xl mb-4"></i>
+            <h3 class="text-2xl font-bold text-white mb-2">Order Confirmed!</h3>
+            <p class="text-gray-300 mb-6" id="confirmation-message">Thank you for your order. We'll start preparing it right away.</p>
+            <button id="confirm-ok" class="bg-[#ff6a00] text-white font-semibold rounded-lg px-6 py-3 hover:bg-[#e05a00]">
+                OK
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Leave empty for now. When backend is ready, put its URL here.
+    const API_BASE = ''; // e.g. 'https://api.yoursite.com'
+
+    // Helper: returns either the local file or the API endpoint.
+    function getJsonUrl(file) {
+    return API_BASE ? `${API_BASE}/${file}` : file;
+    }
+
+    // NEW: Maximum quantity per item (easily changeable)
+    const MAX_QUANTITY_PER_ITEM = 10;
+
+    // Sauce options (unchanged)
+    const sauceOptions = {
+        "Beefy-Tastic": ["Burger Blast", "Butter Ranch", "Garlic Gurb", "Habanero Mayo", "Siracha Heat", "Smookey BBQ", "Tomato Splash", "Buffalo Kick", "Mango Habenero"],
+        "Chicken menu": ["Burger Blast", "Butter Ranch", "Garlic Gurb", "Habanero Mayo", "Siracha Heat", "Smookey BBQ", "Tomato Splash", "Buffalo Kick", "Mango Habenero"],
+        "Grilled-Tastic": ["Mango & Lime", "Medium Peri Peri", "Hot Peri Peri"],
+        "Wrap-Tastic": ["Garlic Herb Mayo", "Sticky BBQ", "Buffalo Kick"],
+        "Wings/tenders": ["Mango & Lime", "Korean BBQ", "Peri Peri", "Mango Habanero", "Hot Honey Siracha", "Buffalo Kick"],
+        "Veggie-Tastic": ["Garlic Mayo", "Sweet Chilli", "BBQ", "Ketchup", "Mayonnaise"]
+    };
+
+    // Drinks options (unchanged)
+    const drinkOptions = [
+        "Sprite", "Pepsi", "Tango Orange", "Tango Mango", "Vimto", "KA sparkling fruit punch"
+    ];
+
+    // Vegetables options (unchanged)
+    const vegetableOptions = [
+        "Lettuce", "Onions", "Pickles", "Tomatoes", "Cucumber"
+    ];
+
+    // JSON files to load (must be placed in the same folder as index_fixed_dm.html)
+    const jsonFiles = [
+        "beefy-tastic.json",
+        "chicken-menu.json",
+        "veggie-tastic.json",
+        "grilled-tastic.json",
+        "wrap-tastic.json",
+        "don-shawarma.json",
+        "wings-tenders.json",
+        "loaded-fries.json",
+        "drinks-milkshakes.json",
+        "addons-sauces.json"
+    ];
+
+    let menuData = {};
+
+    // Load all external JSON files
+    async function loadAllJSON() {
+        for (const file of jsonFiles) {
+            try {
+                const response = await fetch(getJsonUrl(file));
+                if (!response.ok) throw new Error(`Failed to load ${file}`);
+                const data = await response.json();
+                menuData[file] = data;
+            } catch (err) {
+                console.error(`Error loading ${file}:`, err);
+            }
+        }
+        // Load pickup-times.json
+        try {
+            const response = await fetch(getJsonUrl("pickup-times.json"));
+            if (!response.ok) throw new Error("Failed to load pickup-times.json");
+            const data = await response.json();
+            pickupTimes = data.times || [];
+
+            pickupTimeDropdown.innerHTML = '<option value="">Select a pickup time...</option>';
+            pickupTimes.forEach(time => {
+                const opt = document.createElement("option");
+                opt.value = time;
+                opt.textContent = time;
+                pickupTimeDropdown.appendChild(opt);
+            });
+        } catch (err) {
+            console.error("Error loading pickup-times.json:", err);
+            pickupTimeDropdown.innerHTML = '<option value="">Pickup times unavailable</option>';
+        }           
+    }
+
+    // Cart functionality
+    let cart = [];
+    const cartButton = document.getElementById('cart-button');
+    const closeCart = document.getElementById('close-cart');
+    const cartDrawer = document.querySelector('.cart-drawer');
+    const overlay = document.querySelector('.overlay');
+    const cartItems = document.getElementById('cart-items');
+    const cartSubtotal = document.getElementById('cart-subtotal');
+    const cartCount = document.getElementById('cart-count');
+    const menuContainer = document.getElementById('menu-container');
+    const searchInput = document.getElementById('search-input');
+    const tagFilters = document.querySelectorAll('.tag-filter');
+    const checkoutButton = document.getElementById('checkout-button');
+    const orderNowButton = document.getElementById('order-now-btn');
+    const viewMenuButton = document.getElementById('view-menu-btn');
+    const mainContent = document.getElementById('main-content');
+    const checkoutPage = document.getElementById('checkout-page');
+    const backToMenuButton = document.getElementById('back-to-menu');
+    const checkoutItems = document.getElementById('checkout-items');
+    const checkoutTotal = document.getElementById('checkout-total');
+    const placeOrderButton = document.getElementById('place-order-btn');
+    const checkoutForm = document.getElementById('checkout-form');
+    const orderConfirmation = document.getElementById('order-confirmation');
+    const confirmOkButton = document.getElementById('confirm-ok');
+    
+    // NEW: Checkout form elements
+    const deliveryTypeDropdown = document.getElementById('delivery-type');
+    const detailsContainer = document.getElementById('details-container');
+    const checkoutInputs = document.querySelectorAll('.checkout-input');
+
+    // Modal elements
+    const itemModal = document.getElementById('item-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const modalOptions = document.getElementById('modal-options');
+    const modalBasePrice = document.getElementById('modal-base-price');
+    const modalChipsDrinkPrice = document.getElementById('modal-chips-drink-price');
+    const modalFinalPrice = document.getElementById('modal-final-price');
+    const modalAddBase = document.getElementById('modal-add-base');
+    const modalAddChipsDrink = document.getElementById('modal-add-chips-drink');
+    const drinkSelection = document.getElementById('drink-selection');
+    const drinkSelect = document.getElementById('drink-select');
+    const modalAddChipsDrinkFinal = document.getElementById('modal-add-chips-drink-final');
+    const closeModal = document.querySelector('.close-modal');
+    const vegetableSelection = document.getElementById('vegetable-selection');
+    // NEW: Pickup time dropdown
+    const pickupTimeContainer = document.getElementById('pickup-time-container');
+    const pickupTimeDropdown = document.getElementById('pickup-time');
+    let pickupTimes = [];
+
+    // NEW: Quantity selector elements
+    const quantityInput = document.getElementById('modal-quantity');
+    const decreaseQuantityBtn = document.querySelector('.decrease-quantity');
+    const increaseQuantityBtn = document.querySelector('.increase-quantity');
+    
+    // Image positioning controls
+    const imagePositionSlider = document.getElementById('image-position-slider');
+    const positionValue = document.getElementById('position-value');
+    const resetPositionButton = document.getElementById('reset-position');
+    const imageControlPanel = document.querySelector('.image-control-panel');
+
+    // NEW: Clear cart button
+    const clearCartButton = document.getElementById('clear-cart');
+
+    // Current item being viewed in modal
+    let currentModalItem = null;
+
+    // Load menu items from JSON data
+    function loadMenuItems() {
+        let allItems = [];
+        let showSliderPanel = false;
+        
+        // Simulate loading from multiple JSON files
+        for (const fileName in menuData) {
+            if (menuData.hasOwnProperty(fileName)) {
+                allItems = allItems.concat(menuData[fileName].items);
+                
+                // Check if any item has showSlider set to true
+                if (menuData[fileName].items.some(item => item.showSlider)) {
+                    showSliderPanel = true;
+                }
+            }
+        }
+        
+        // Show slider panel if any item has showSlider: true
+        if (showSliderPanel) {
+            imageControlPanel.style.display = 'block';
+        }
+        
+        renderMenuItems(allItems);
+    }
+
+    // Render menu items to the page
+    function renderMenuItems(items) {
+        menuContainer.innerHTML = '';
+        
+        if (items.length === 0) {
+            menuContainer.innerHTML = '<p class="text-center text-gray-400 col-span-full py-8 text-lg">No menu items found matching your criteria.</p>';
+            return;
+        }
+        
+        items.forEach(item => {
+            const article = document.createElement('article');
+            article.className = 'bg-[#1a1a1a] rounded-xl overflow-hidden shadow-md text-base menu-item-card';
+            
+            // Check if item has options
+            const hasOptions = item.options && item.options.length > 0;
+
+            // Check tags separately
+            const hasDTag = item.tags.includes("D");
+            const hasMTag = item.tags.includes("M");
+
+            article.innerHTML = `
+                <div class="relative">
+                    <img 
+                        alt="${item.name}" 
+                        class="menu-item-image ${hasDTag ? 'd-tag-image' : ''} ${hasMTag ? 'm-tag-image' : ''}" 
+                        src="${item.image}">
+                    <span class="absolute top-3 left-3 bg-[#ff6a00] text-xs font-semibold uppercase rounded px-2 py-1">
+                        ${item.tags[0]}
+                    </span>
+                </div>
+                <div class="p-4 card-content">
+                    <h4 class="font-semibold text-white mb-2 text-lg">${item.name}</h4>
+                    <p class="text-gray-400 mb-3 text-sm">${item.description}</p>
+                    <div class="flex justify-between items-center mt-auto pt-2">
+                        <span class="text-[#ff6a00] font-semibold text-lg">
+                            ${hasOptions ? `From £${Math.min(...item.options.map(o => o.price)).toFixed(2)}` : `£${item.price.toFixed(2)}`}
                         </span>
                     </div>
-                    <div class="p-4 card-content">
-                        <h4 class="font-semibold text-white mb-2 text-lg">${item.name}</h4>
-                        <p class="text-gray-400 mb-3 text-sm">${item.description}</p>
-                        <div class="flex justify-between items-center mt-auto pt-2">
-                            <span class="text-[#ff6a00] font-semibold text-lg">
-                                ${hasOptions ? `From £${Math.min(...item.options.map(o => o.price)).toFixed(2)}` : `£${item.price.toFixed(2)}`}
-                            </span>
-                        </div>
-                    </div>
-                `;
-                
-                // Add click event to open modal
-                article.addEventListener('click', () => {
-                    openItemModal(item);
-                });
-                
-                menuContainer.appendChild(article);
+                </div>
+            `;
+            
+            // Add click event to open modal
+            article.addEventListener('click', () => {
+                openItemModal(item);
             });
+            
+            menuContainer.appendChild(article);
+        });
+    }
+
+    // Open modal for a menu item
+    function openItemModal(item) {
+        currentModalItem = item;
+
+        // Reset quantity to 1
+        quantityInput.value = 1;
+        updateQuantityButtons();
+
+        // Reset drink selection UI
+        drinkSelection.style.display = 'none';
+        modalAddChipsDrink.style.display = 'block';
+
+        // Reset vegetable selection
+        document.querySelectorAll('input[name="vegetables"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Show or hide vegetable selection based on item
+        if (item.vegetables) {
+            vegetableSelection.style.display = 'block';
+        } else {
+            vegetableSelection.style.display = 'none';
         }
 
-        // Open modal for a menu item
-        function openItemModal(item) {
-            currentModalItem = item;
+        // Set modal content
+        modalImage.src = item.image;
+        modalTitle.textContent = item.name;
+        modalDescription.textContent = item.description;
 
-            // Reset quantity to 1
-            quantityInput.value = 1;
-            updateQuantityButtons();
+        // Clear previous options
+        modalOptions.innerHTML = '';
 
-            // Reset drink selection UI
-            drinkSelection.style.display = 'none';
-            modalAddChipsDrink.style.display = 'block';
+        // ----- OPTIONS LOGIC -----
+        const hasOptions = item.options && item.options.length > 0;
+        let selectedOptionIndex = 0;
+        let basePrice = hasOptions ? item.options[0].price : item.price;
 
-            // Reset vegetable selection
-            document.querySelectorAll('input[name="vegetables"]').forEach(checkbox => {
-                checkbox.checked = false;
+        if (hasOptions) {
+            const optionsDiv = document.createElement('div');
+            optionsDiv.className = 'modal-option';
+
+            // check if all options same price
+            const allSamePrice = item.options.every(
+                opt => opt.price === item.options[0].price
+            );
+
+            optionsDiv.innerHTML = `
+                <label for="modal-option-select">Choose:</label>
+                <select id="modal-option-select" class="option-selector">
+                    ${item.options
+                        .map(
+                            (option, index) => `
+                        <option value="${index}" data-price="${option.price}">
+                            ${
+                                allSamePrice
+                                    ? option.name
+                                    : `${option.name} - £${option.price.toFixed(2)}`
+                            }
+                        </option>
+                    `
+                        )
+                        .join('')}
+                </select>
+            `;
+            modalOptions.appendChild(optionsDiv);
+
+            // bind AFTER element exists
+            const optionSelect = optionsDiv.querySelector('#modal-option-select');
+            optionSelect.addEventListener('change', e => {
+                selectedOptionIndex = parseInt(e.target.value, 10);
+                basePrice = item.options[selectedOptionIndex].price;
+                updateModalPrices(item, basePrice);
             });
+        } else {
+            basePrice = item.price;
+        }
 
-            // Show or hide vegetable selection based on item
-            if (item.vegetables) {
-                vegetableSelection.style.display = 'block';
-            } else {
-                vegetableSelection.style.display = 'none';
-            }
+        // ----- SAUCES -----
+        if (item.sauces) {
+            // Find the category for sauce options
+            let sauceCategory = item.tags.find(tag =>
+                sauceOptions.hasOwnProperty(tag)
+            );
 
-            // Set modal content
-            modalImage.src = item.image;
-            modalTitle.textContent = item.name;
-            modalDescription.textContent = item.description;
+            if (sauceCategory && sauceOptions[sauceCategory]) {
+                const sauceDiv = document.createElement('div');
+                sauceDiv.className = 'modal-option';
 
-            // Clear previous options
-            modalOptions.innerHTML = '';
+                // Determine the label text based on category
+                let labelText = 'Sauce';
+                if (['Beefy-Tastic', 'Chicken menu', 'Veggie-Tastic'].includes(sauceCategory)) {
+                    labelText = 'Dip';
+                } else if (['Grilled-Tastic', 'Wrap-Tastic', 'Wings/tenders'].includes(sauceCategory)) {
+                    labelText = 'Flavour';
+                }
 
-            // ----- OPTIONS LOGIC -----
-            const hasOptions = item.options && item.options.length > 0;
-            let selectedOptionIndex = 0;
-            let basePrice = hasOptions ? item.options[0].price : item.price;
-
-            if (hasOptions) {
-                const optionsDiv = document.createElement('div');
-                optionsDiv.className = 'modal-option';
-
-                // check if all options same price
-                const allSamePrice = item.options.every(
-                    opt => opt.price === item.options[0].price
-                );
-
-                optionsDiv.innerHTML = `
-                    <label for="modal-option-select">Choose:</label>
-                    <select id="modal-option-select" class="option-selector">
-                        ${item.options
+                sauceDiv.innerHTML = `
+                    <label for="modal-sauce-select">${labelText}:</label>
+                    <select id="modal-sauce-select" class="option-selector">
+                        ${sauceOptions[sauceCategory]
                             .map(
-                                (option, index) => `
-                            <option value="${index}" data-price="${option.price}">
-                                ${
-                                    allSamePrice
-                                        ? option.name
-                                        : `${option.name} - £${option.price.toFixed(2)}`
-                                }
-                            </option>
-                        `
+                                sauce => `<option value="${sauce}">${sauce}</option>`
                             )
                             .join('')}
                     </select>
                 `;
-                modalOptions.appendChild(optionsDiv);
-
-                // bind AFTER element exists
-                const optionSelect = optionsDiv.querySelector('#modal-option-select');
-                optionSelect.addEventListener('change', e => {
-                    selectedOptionIndex = parseInt(e.target.value, 10);
-                    basePrice = item.options[selectedOptionIndex].price;
-                    updateModalPrices(item, basePrice);
-                });
-            } else {
-                basePrice = item.price;
-            }
-
-            // ----- SAUCES -----
-            if (item.sauces) {
-                // Find the category for sauce options
-                let sauceCategory = item.tags.find(tag =>
-                    sauceOptions.hasOwnProperty(tag)
-                );
-
-                if (sauceCategory && sauceOptions[sauceCategory]) {
-                    const sauceDiv = document.createElement('div');
-                    sauceDiv.className = 'modal-option';
-
-                    // Determine the label text based on category
-                    let labelText = 'Sauce';
-                    if (['Beefy-Tastic', 'Chicken menu', 'Veggie-Tastic'].includes(sauceCategory)) {
-                        labelText = 'Dip';
-                    } else if (['Grilled-Tastic', 'Wrap-Tastic', 'Wings/tenders'].includes(sauceCategory)) {
-                        labelText = 'Flavour';
-                    }
-
-                    sauceDiv.innerHTML = `
-                        <label for="modal-sauce-select">${labelText}:</label>
-                        <select id="modal-sauce-select" class="option-selector">
-                            ${sauceOptions[sauceCategory]
-                                .map(
-                                    sauce => `<option value="${sauce}">${sauce}</option>`
-                                )
-                                .join('')}
-                        </select>
-                    `;
-                    modalOptions.appendChild(sauceDiv);
-                }
-            }
-
-            // Update prices initially
-            updateModalPrices(item, basePrice);
-
-            // Show modal
-            itemModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        // NEW: Update quantity buttons state
-        function updateQuantityButtons() {
-            const quantity = parseInt(quantityInput.value);
-            decreaseQuantityBtn.disabled = quantity <= 1;
-            increaseQuantityBtn.disabled = quantity >= MAX_QUANTITY_PER_ITEM;
-        }
-
-        // Update prices in modal
-        function updateModalPrices(item, basePrice) {
-            const quantity = parseInt(quantityInput.value);
-            modalBasePrice.textContent = (basePrice * quantity).toFixed(2);
-            modalChipsDrinkPrice.textContent = ((basePrice + item.mealPriceModifier) * quantity).toFixed(2);
-            modalFinalPrice.textContent = ((basePrice + item.mealPriceModifier) * quantity).toFixed(2);
-        }
-
-        // Close modal
-        function closeItemModal() {
-            itemModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            currentModalItem = null;
-        }
-
-        // Find menu item by name
-        function findMenuItemByName(name) {
-            for (const fileName in menuData) {
-                if (menuData.hasOwnProperty(fileName)) {
-                    const item = menuData[fileName].items.find(item => item.name === name);
-                    if (item) return item;
-                }
-            }
-            return null;
-        }
-
-        // Filter menu items based on search and tags - FIXED VERSION
-        function filterMenuItems() {
-            const searchTerm = searchInput.value.toLowerCase();
-            const activeTag = document.querySelector('.tag-filter.active')?.getAttribute('data-tag') || 'all';
-            
-            let allItems = [];
-            for (const fileName in menuData) {
-                if (menuData.hasOwnProperty(fileName)) {
-                    allItems = allItems.concat(menuData[fileName].items);
-                }
-            }
-            
-            let filteredItems = allItems.filter(item => {
-                const matchesSearch = item.name.toLowerCase().includes(searchTerm) || 
-                                    item.description.toLowerCase().includes(searchTerm);
-                
-                let matchesTag = activeTag === 'all';
-                
-                // Handle combined categories
-                if (activeTag === "Drinks & Milkshakes") {
-                    matchesTag = item.tags.includes("Drinks & Milkshakes");
-                } else if (activeTag === "Addons & Sauces") {
-                    matchesTag = item.tags.includes("Addons & Sauces");
-                } else if (activeTag === "Loaded Fries") {
-                    matchesTag = item.tags.includes("Loaded Fries");
-                } else if (activeTag !== 'all') {
-                    matchesTag = item.tags.includes(activeTag);
-                }
-                
-                // If "All" is selected, show all items regardless of search term
-                if (activeTag === 'all') {
-                    return matchesSearch;
-                }
-                
-                return matchesSearch && matchesTag;
-            });
-            
-            renderMenuItems(filteredItems);
-        }
-
-        // Add item to cart from modal
-        function addToCartFromModal(isChipsDrink, selectedDrink) {
-            if (!currentModalItem) return;
-            
-            const quantity = parseInt(quantityInput.value);
-            const hasOptions = currentModalItem.options && currentModalItem.options.length > 0;
-            let selectedOption = null;
-            let selectedSauce = null;
-            let selectedVegetables = [];
-            let basePrice = currentModalItem.price;
-            
-            // Get selected option if exists
-            if (hasOptions) {
-                const optionSelect = document.getElementById('modal-option-select');
-                const optionIndex = parseInt(optionSelect.value);
-                selectedOption = currentModalItem.options[optionIndex].name;
-                basePrice = currentModalItem.options[optionIndex].price;
-            }
-            
-            // Get selected sauce if exists
-            if (currentModalItem.sauces) {
-                const sauceSelect = document.getElementById('modal-sauce-select');
-                if (sauceSelect) {
-                    selectedSauce = sauceSelect.value;
-                }
-            }
-            
-            // Get selected vegetables if applicable
-            if (currentModalItem.vegetables) {
-                const vegetableCheckboxes = document.querySelectorAll('input[name="vegetables"]:checked');
-                selectedVegetables = Array.from(vegetableCheckboxes).map(cb => cb.value);
-            }
-            
-            const price = isChipsDrink ? basePrice + currentModalItem.mealPriceModifier : basePrice;
-            
-            let displayName = currentModalItem.name;
-            if (selectedOption) displayName += ` (${selectedOption})`;
-            if (selectedSauce) displayName += ` with ${selectedSauce}`;
-            if (selectedVegetables.length > 0) displayName += ` with ${selectedVegetables.join(', ')}`;
-            if (isChipsDrink) displayName += ` with Chips and ${selectedDrink}`;
-            
-            // Check if item already exists in cart
-            const existingItem = cart.find(item => item.name === displayName);
-            
-            if (existingItem) {
-                existingItem.quantity += quantity;
-            } else {
-                cart.push({
-                    name: displayName,
-                    price,
-                    quantity,
-                    isChipsDrink,
-                    selectedOption,
-                    selectedSauce,
-                    selectedVegetables,
-                    selectedDrink: isChipsDrink ? selectedDrink : null,
-                    mealPriceModifier: isChipsDrink ? currentModalItem.mealPriceModifier : 0
-                });
-            }
-            
-            updateCart();
-            closeItemModal();
-            openCartDrawer();
-        }
-
-        // Open cart drawer
-        function openCartDrawer() {
-            cartDrawer.classList.add('open');
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        // Close cart drawer
-        function closeCartDrawer() {
-            cartDrawer.classList.remove('open');
-            overlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Update cart display
-        function updateCart() {
-            // Clear current items
-            cartItems.innerHTML = '';
-            
-            let total = 0;
-            let count = 0;
-            
-            // Add items to cart display
-            cart.forEach(item => {
-                const itemTotal = item.price * item.quantity;
-                total += itemTotal;
-                count += item.quantity;
-                
-                const li = document.createElement('li');
-                li.className = 'flex justify-between items-center text-white text-sm border-b border-[#222222] pb-3';
-                li.innerHTML = `
-                    <div>
-                        <div class="font-semibold">${item.quantity} x ${item.name}</div>
-                        <div class="text-[#ff6a00]">£${item.price.toFixed(2)} each</div>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="font-semibold mr-3">£${itemTotal.toFixed(2)}</span>
-                        <button class="remove-item text-red-500 hover:text-red-700" data-name="${item.name}">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
-                `;
-                
-                cartItems.appendChild(li);
-            });
-            
-            // Update subtotal and count
-            cartSubtotal.textContent = `£${total.toFixed(2)}`;
-            cartCount.textContent = `Cart (${count})`;
-            
-            // Enable/disable clear cart button based on whether cart has items
-            clearCartButton.disabled = cart.length === 0;
-            
-            // Update checkout button text
-            placeOrderButton.textContent = `Place Order – £${total.toFixed(2)}`;
-            
-            // Add event listeners to remove buttons
-            document.querySelectorAll('.remove-item').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const name = e.currentTarget.getAttribute('data-name');
-                    removeFromCart(name);
-                });
-            });
-        }
-
-        // Remove item from cart
-        function removeFromCart(name) {
-            const itemIndex = cart.findIndex(item => item.name === name);
-            
-            if (itemIndex !== -1) {
-                cart.splice(itemIndex, 1);
-                updateCart();
+                modalOptions.appendChild(sauceDiv);
             }
         }
 
-        // NEW: Clear entire cart
-        function clearCart() {
-            cart = [];
-            updateCart();
-        }
+        // Update prices initially
+        updateModalPrices(item, basePrice);
 
-        // Show checkout page
-        function showCheckoutPage() {
-            if (cart.length === 0) {
-                // Using a custom modal/alert in the future would be better than the browser's default alert.
-                // For now, this provides the necessary feedback.
-                const customAlert = document.createElement('div');
-                customAlert.innerHTML = `
-                    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 1001; display: flex; align-items: center; justify-content: center;">
-                        <div style="background: #1a1a1a; padding: 2rem; border-radius: 1rem; text-align: center; color: white;">
-                            <p class="mb-4">Your cart is empty. Please add some items before checkout.</p>
-                            <button id="custom-alert-ok" style="background: #ff6a00; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem;">OK</button>
-                        </div>
-                    </div>
-                `;
-                document.body.appendChild(customAlert);
-                document.getElementById('custom-alert-ok').onclick = () => customAlert.remove();
-                return;
+        // Show modal
+        itemModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    // NEW: Update quantity buttons state
+    function updateQuantityButtons() {
+        const quantity = parseInt(quantityInput.value);
+        decreaseQuantityBtn.disabled = quantity <= 1;
+        increaseQuantityBtn.disabled = quantity >= MAX_QUANTITY_PER_ITEM;
+    }
+
+    // Update prices in modal
+    function updateModalPrices(item, basePrice) {
+        const quantity = parseInt(quantityInput.value);
+        modalBasePrice.textContent = (basePrice * quantity).toFixed(2);
+        modalChipsDrinkPrice.textContent = ((basePrice + item.mealPriceModifier) * quantity).toFixed(2);
+        modalFinalPrice.textContent = ((basePrice + item.mealPriceModifier) * quantity).toFixed(2);
+    }
+
+    // Close modal
+    function closeItemModal() {
+        itemModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        currentModalItem = null;
+    }
+
+    // Find menu item by name
+    function findMenuItemByName(name) {
+        for (const fileName in menuData) {
+            if (menuData.hasOwnProperty(fileName)) {
+                const item = menuData[fileName].items.find(item => item.name === name);
+                if (item) return item;
             }
-
-            mainContent.style.display = 'none';
-            checkoutPage.style.display = 'block';
-
-            // Populate checkout items
-            checkoutItems.innerHTML = '';
-            let total = 0;
-
-            cart.forEach(item => {
-                const itemTotal = item.price * item.quantity;
-                total += itemTotal;
-
-                const div = document.createElement('div');
-                div.className = 'flex justify-between items-center';
-                div.innerHTML = `
-                    <div class="flex-1">
-                        <div class="font-semibold">${item.quantity} x ${item.name}</div>
-                        <div class="text-sm text-gray-400">£${item.price.toFixed(2)} each</div>
-                    </div>
-                    <div class="font-semibold">£${itemTotal.toFixed(2)}</div>
-                `;
-
-                checkoutItems.appendChild(div);
-            });
-
-            checkoutTotal.textContent = `£${total.toFixed(2)}`;
-            placeOrderButton.textContent = `Place Order – £${total.toFixed(2)}`;
-            
-            // NEW: Reset checkout form state
-            deliveryTypeDropdown.value = '';
-            detailsContainer.style.display = 'none';
-            placeOrderButton.disabled = true;
         }
+        return null;
+    }
 
-        // Show main content
-        function showMainContent() {
-            checkoutPage.style.display = 'none';
-            mainContent.style.display = 'block';
+    // Filter menu items based on search and tags - FIXED VERSION
+    function filterMenuItems() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const activeTag = document.querySelector('.tag-filter.active')?.getAttribute('data-tag') || 'all';
+        
+        let allItems = [];
+        for (const fileName in menuData) {
+            if (menuData.hasOwnProperty(fileName)) {
+                allItems = allItems.concat(menuData[fileName].items);
+            }
         }
         
-        // NEW: Check if all required fields are filled to enable the place order button
-        function checkFormValidity() {
-            let allFilled = true;
-            checkoutInputs.forEach(input => {
-                if (!input.value.trim()) {
-                    allFilled = false;
-                }
-            });
-            placeOrderButton.disabled = !allFilled;
-        }
-        function buildItemsForBackend(cart) {
-            const backendItems = [];
+        let filteredItems = allItems.filter(item => {
+            const matchesSearch = item.name.toLowerCase().includes(searchTerm) || 
+                                item.description.toLowerCase().includes(searchTerm);
+            
+            let matchesTag = activeTag === 'all';
+            
+            // Handle combined categories
+            if (activeTag === "Drinks & Milkshakes") {
+                matchesTag = item.tags.includes("Drinks & Milkshakes");
+            } else if (activeTag === "Addons & Sauces") {
+                matchesTag = item.tags.includes("Addons & Sauces");
+            } else if (activeTag === "Loaded Fries") {
+                matchesTag = item.tags.includes("Loaded Fries");
+            } else if (activeTag !== 'all') {
+                matchesTag = item.tags.includes(activeTag);
+            }
+            
+            // If "All" is selected, show all items regardless of search term
+            if (activeTag === 'all') {
+                return matchesSearch;
+            }
+            
+            return matchesSearch && matchesTag;
+        });
+        
+        renderMenuItems(filteredItems);
+    }
 
-            cart.forEach(item => {
-                if (item.isChipsDrink) {
-                // main item without the modifier
+    // Add item to cart from modal
+    function addToCartFromModal(isChipsDrink, selectedDrink) {
+        if (!currentModalItem) return;
+        
+        const quantity = parseInt(quantityInput.value);
+        const hasOptions = currentModalItem.options && currentModalItem.options.length > 0;
+        let selectedOption = null;
+        let selectedSauce = null;
+        let selectedVegetables = [];
+        let basePrice = currentModalItem.price;
+        
+        // Get selected option if exists
+        if (hasOptions) {
+            const optionSelect = document.getElementById('modal-option-select');
+            const optionIndex = parseInt(optionSelect.value);
+            selectedOption = currentModalItem.options[optionIndex].name;
+            basePrice = currentModalItem.options[optionIndex].price;
+        }
+        
+        // Get selected sauce if exists
+        if (currentModalItem.sauces) {
+            const sauceSelect = document.getElementById('modal-sauce-select');
+            if (sauceSelect) {
+                selectedSauce = sauceSelect.value;
+            }
+        }
+        
+        // Get selected vegetables if applicable
+        if (currentModalItem.vegetables) {
+            const vegetableCheckboxes = document.querySelectorAll('input[name="vegetables"]:checked');
+            selectedVegetables = Array.from(vegetableCheckboxes).map(cb => cb.value);
+        }
+        
+        const price = isChipsDrink ? basePrice + currentModalItem.mealPriceModifier : basePrice;
+        
+        let displayName = currentModalItem.name;
+        if (selectedOption) displayName += ` (${selectedOption})`;
+        if (selectedSauce) displayName += ` with ${selectedSauce}`;
+        if (selectedVegetables.length > 0) displayName += ` with ${selectedVegetables.join(', ')}`;
+        if (isChipsDrink) displayName += ` with Chips and ${selectedDrink}`;
+        
+        // Check if item already exists in cart
+        const existingItem = cart.find(item => item.name === displayName);
+        
+        if (existingItem) {
+            existingItem.quantity += quantity;
+        } else {
+            cart.push({
+                name: displayName,
+                price,
+                quantity,
+                isChipsDrink,
+                selectedOption,
+                selectedSauce,
+                selectedVegetables,
+                selectedDrink: isChipsDrink ? selectedDrink : null,
+                mealPriceModifier: isChipsDrink ? currentModalItem.mealPriceModifier : 0
+            });
+        }
+        
+        updateCart();
+        closeItemModal();
+        openCartDrawer();
+    }
+
+    // Open cart drawer
+    function openCartDrawer() {
+        cartDrawer.classList.add('open');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close cart drawer
+    function closeCartDrawer() {
+        cartDrawer.classList.remove('open');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Update cart display
+    function updateCart() {
+        // Clear current items
+        cartItems.innerHTML = '';
+        
+        let total = 0;
+        let count = 0;
+        
+        // Add items to cart display
+        cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            count += item.quantity;
+            
+            const li = document.createElement('li');
+            li.className = 'flex justify-between items-center text-white text-sm border-b border-[#222222] pb-3';
+            li.innerHTML = `
+                <div>
+                    <div class="font-semibold">${item.quantity} x ${item.name}</div>
+                    <div class="text-[#ff6a00]">£${item.price.toFixed(2)} each</div>
+                </div>
+                <div class="flex items-center">
+                    <span class="font-semibold mr-3">£${itemTotal.toFixed(2)}</span>
+                    <button class="remove-item text-red-500 hover:text-red-700" data-name="${item.name}">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `;
+            
+            cartItems.appendChild(li);
+        });
+        
+        // Update subtotal and count
+        cartSubtotal.textContent = `£${total.toFixed(2)}`;
+        cartCount.textContent = `Cart (${count})`;
+        
+        // Enable/disable clear cart button based on whether cart has items
+        clearCartButton.disabled = cart.length === 0;
+        
+        // Update checkout button text
+        placeOrderButton.textContent = `Place Order – £${total.toFixed(2)}`;
+        
+        // Add event listeners to remove buttons
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const name = e.currentTarget.getAttribute('data-name');
+                removeFromCart(name);
+            });
+        });
+    }
+
+    // Remove item from cart
+    function removeFromCart(name) {
+        const itemIndex = cart.findIndex(item => item.name === name);
+        
+        if (itemIndex !== -1) {
+            cart.splice(itemIndex, 1);
+            updateCart();
+        }
+    }
+
+    // NEW: Clear entire cart
+    function clearCart() {
+        cart = [];
+        updateCart();
+    }
+
+    // Show checkout page
+    function showCheckoutPage() {
+        if (cart.length === 0) {
+            // Using a custom modal/alert in the future would be better than the browser's default alert.
+            // For now, this provides the necessary feedback.
+            const customAlert = document.createElement('div');
+            customAlert.innerHTML = `
+                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 1001; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: #1a1a1a; padding: 2rem; border-radius: 1rem; text-align: center; color: white;">
+                        <p class="mb-4">Your cart is empty. Please add some items before checkout.</p>
+                        <button id="custom-alert-ok" style="background: #ff6a00; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem;">OK</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(customAlert);
+            document.getElementById('custom-alert-ok').onclick = () => customAlert.remove();
+            return;
+        }
+
+        mainContent.style.display = 'none';
+        checkoutPage.style.display = 'block';
+
+        // Populate checkout items
+        checkoutItems.innerHTML = '';
+        let total = 0;
+
+        cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+
+            const div = document.createElement('div');
+            div.className = 'flex justify-between items-center';
+            div.innerHTML = `
+                <div class="flex-1">
+                    <div class="font-semibold">${item.quantity} x ${item.name}</div>
+                    <div class="text-sm text-gray-400">£${item.price.toFixed(2)} each</div>
+                </div>
+                <div class="font-semibold">£${itemTotal.toFixed(2)}</div>
+            `;
+
+            checkoutItems.appendChild(div);
+        });
+
+        checkoutTotal.textContent = `£${total.toFixed(2)}`;
+        placeOrderButton.textContent = `Place Order – £${total.toFixed(2)}`;
+        
+        // NEW: Reset checkout form state
+        deliveryTypeDropdown.value = '';
+        detailsContainer.style.display = 'none';
+        placeOrderButton.disabled = true;
+    }
+
+    // Show main content
+    function showMainContent() {
+        checkoutPage.style.display = 'none';
+        mainContent.style.display = 'block';
+    }
+    
+    // NEW: Check if all required fields are filled to enable the place order button
+    function checkFormValidity() {
+        let allFilled = true;
+        checkoutInputs.forEach(input => {
+            if (!input.value.trim()) {
+                allFilled = false;
+            }
+        });
+        if (deliveryTypeDropdown.value === 'collection') {
+            if (!pickupTimeDropdown.value) allFilled = false;
+        }
+        placeOrderButton.disabled = !allFilled;
+    }
+    function buildItemsForBackend(cart) {
+        const backendItems = [];
+
+        cart.forEach(item => {
+            if (item.isChipsDrink) {
+            // main item without the modifier
+            backendItems.push({
+                name: item.name.replace(/ with Chips and.*$/, ''), // strip the trailing text
+                price: item.price - item.mealPriceModifier,         // base price only
+                quantity: item.quantity,
+                selectedOption: item.selectedOption,
+                selectedSauce: item.selectedSauce,
+                selectedVegetables: item.selectedVegetables
+            });
+
+            // separate line for chips & drink
+            backendItems.push({
+                name: `Chips & Drink (${item.selectedDrink})`,
+                price: item.mealPriceModifier,
+                quantity: item.quantity
+            });
+            } else {
                 backendItems.push({
-                    name: item.name.replace(/ with Chips and.*$/, ''), // strip the trailing text
-                    price: item.price - item.mealPriceModifier,         // base price only
+                    name: item.name,
+                    price: item.price,
                     quantity: item.quantity,
                     selectedOption: item.selectedOption,
                     selectedSauce: item.selectedSauce,
                     selectedVegetables: item.selectedVegetables
                 });
-
-                // separate line for chips & drink
-                backendItems.push({
-                    name: `Chips & Drink (${item.selectedDrink})`,
-                    price: item.mealPriceModifier,
-                    quantity: item.quantity
-                });
-                } else {
-                    backendItems.push({
-                        name: item.name,
-                        price: item.price,
-                        quantity: item.quantity,
-                        selectedOption: item.selectedOption,
-                        selectedSauce: item.selectedSauce,
-                        selectedVegetables: item.selectedVegetables
-                    });
-                }
-            });
-
-            return backendItems;
-        }
-
-        // Handle form submission
-        // Handle form submission
-        async function handleFormSubmit(e) {
-        e.preventDefault();
-
-        // Check validity one last time before submitting
-        checkFormValidity();
-        if (placeOrderButton.disabled) {
-            return;
-        }
-
-        // collect order data to send to backend if needed
-        const deliveryType = document.getElementById('delivery-type').value;
-        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-        const order = {
-            deliveryType,
-            customer: {
-            fullName: document.getElementById('full-name').value,
-            phone: document.getElementById('phone').value,
-            email: document.getElementById('email').value,
-            specialInstructions: document.getElementById('special-instructions').value
-            },
-            items: buildItemsForBackend(cart),
-            total: total.toFixed(2) // Add the total here
-        };
-
-        // send to backend only if API_BASE is set
-        if (API_BASE) {
-            try {
-            const response = await fetch(`${API_BASE}/orders`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(order)
-            });
-            if (!response.ok) throw new Error('Order failed');
-            // optional: read backend response
-            const data = await response.json();
-            console.log('Order submitted:', data);
-            } catch (err) {
-            console.error(err);
-            alert('There was a problem sending your order. Please try again.');
             }
-        }
+        });
 
-        // your existing confirmation message logic
-        const confirmationMessage = document.getElementById('confirmation-message');
-        if (deliveryType === 'collection') {
-            confirmationMessage.textContent =
-            'Thank you for your order. Please come collect your food in 25-30 minutes.';
+        return backendItems;
+    }
+
+    // Handle form submission
+    // Handle form submission
+    async function handleFormSubmit(e) {
+    e.preventDefault();
+
+    // Check validity one last time before submitting
+    checkFormValidity();
+    if (placeOrderButton.disabled) {
+        return;
+    }
+
+    // collect order data to send to backend if needed
+    const deliveryType = document.getElementById('delivery-type').value;
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const order = {
+        deliveryType,
+        customer: {
+        fullName: document.getElementById('full-name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        specialInstructions: document.getElementById('special-instructions').value
+        },
+        items: buildItemsForBackend(cart),
+        total: total.toFixed(2) // Add the total here
+    };
+    const confirmationMessage = document.getElementById('confirmation-message');
+    const orderConfirmation   = document.getElementById('order-confirmation');
+
+
+    // send to backend only if API_BASE is set
+    if (API_BASE) {
+    try {
+        const response = await fetch(`${API_BASE}/orders`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(order)
+        });
+        if (!response.ok) throw new Error('Order failed');
+        const data = await response.json();
+
+        // e.g. {status:"approved", message:"Ready at 7:30pm"}
+        if (data.status === 'approved') {
+        confirmationMessage.textContent = data.message || 'Your order has been approved.';
+        } else if (data.status === 'denied') {
+        confirmationMessage.textContent = data.message || 'Sorry, your order could not be processed.';
         } else {
-            confirmationMessage.textContent =
-            'Thank you for your order. We\'ll start preparing it right away.';
+        confirmationMessage.textContent = 'Unexpected reply from server.';
         }
+    } catch (err) {
+        confirmationMessage.textContent = 'There was a problem sending your order.';
+    }
+    } else {
+    // current 2-second fake message stays for local demo
+    setTimeout(() => {
+        confirmationMessage.textContent = 'Your order has been placed successfully!';
+    }, 2000);
+    }
+    orderConfirmation.classList.remove('hidden');
 
-        orderConfirmation.classList.remove('hidden');
-        }
-
-
-        // Smooth scrolling for navigation
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                
-                if (targetSection) {
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                    
-                    // Update active navigation link
-                    document.querySelectorAll('.nav-link').forEach(navLink => {
-                        navLink.classList.remove('active-section');
-                    });
-                    link.classList.add('active-section');
-                }
+    
+    // Handle image position adjustment
+    function updateImagePosition(value) {
+        document.documentElement.style.setProperty('--image-position-y', value + '%');
+        positionValue.textContent = value + '%';
+    }
+    
+    // Initialize the page
+    function init() {
+        // Load menu items
+        loadMenuItems();
+        
+        // Event listeners
+        cartButton.addEventListener('click', openCartDrawer);
+        closeCart.addEventListener('click', closeCartDrawer);
+        overlay.addEventListener('click', closeCartDrawer);
+        
+        // NEW: Clear cart button event listener
+        clearCartButton.addEventListener('click', clearCart);
+        
+        // Search and filter events
+        searchInput.addEventListener('input', filterMenuItems);
+        
+        tagFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                tagFilters.forEach(f => f.classList.remove('active'));
+                filter.classList.add('active');
+                filterMenuItems();
             });
         });
         
-        // Handle image position adjustment
-        function updateImagePosition(value) {
-            document.documentElement.style.setProperty('--image-position-y', value + '%');
-            positionValue.textContent = value + '%';
-        }
+        // Checkout events
+        checkoutButton.addEventListener('click', showCheckoutPage);
+        orderNowButton.addEventListener('click', showCheckoutPage);
+        backToMenuButton.addEventListener('click', showMainContent);
         
-        // Initialize the page
-        function init() {
-            // Load menu items
-            loadMenuItems();
+        // View Menu button event
+        viewMenuButton.addEventListener('click', () => {
+            document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
             
-            // Event listeners
-            cartButton.addEventListener('click', openCartDrawer);
-            closeCart.addEventListener('click', closeCartDrawer);
-            overlay.addEventListener('click', closeCartDrawer);
-            
-            // NEW: Clear cart button event listener
-            clearCartButton.addEventListener('click', clearCart);
-            
-            // Search and filter events
-            searchInput.addEventListener('input', filterMenuItems);
-            
-            tagFilters.forEach(filter => {
-                filter.addEventListener('click', () => {
-                    tagFilters.forEach(f => f.classList.remove('active'));
-                    filter.classList.add('active');
-                    filterMenuItems();
-                });
+            // Update active navigation link
+            document.querySelectorAll('.nav-link').forEach(navLink => {
+                navLink.classList.remove('active-section');
             });
-            
-            // Checkout events
-            checkoutButton.addEventListener('click', showCheckoutPage);
-            orderNowButton.addEventListener('click', showCheckoutPage);
-            backToMenuButton.addEventListener('click', showMainContent);
-            
-            // View Menu button event
-            viewMenuButton.addEventListener('click', () => {
-                document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
-                
-                // Update active navigation link
-                document.querySelectorAll('.nav-link').forEach(navLink => {
-                    navLink.classList.remove('active-section');
-                });
-                document.querySelector('[href="#menu"]').classList.add('active-section');
-            });
-            
-            // Form submission
-            checkoutForm.addEventListener('submit', handleFormSubmit);
-            
-            // Confirmation button
-            confirmOkButton.addEventListener('click', () => {
-                orderConfirmation.classList.add('hidden');
-                showMainContent();
-                cart = [];
-                updateCart();
-                checkoutForm.reset();
-                // NEW: Also reset the checkout form state after order
-                deliveryTypeDropdown.value = '';
+            document.querySelector('[href="#menu"]').classList.add('active-section');
+        });
+        
+        // Form submission
+        checkoutForm.addEventListener('submit', handleFormSubmit);
+        
+        // Confirmation button
+        confirmOkButton.addEventListener('click', () => {
+            orderConfirmation.classList.add('hidden');
+            showMainContent();
+            cart = [];
+            updateCart();
+            checkoutForm.reset();
+            // NEW: Also reset the checkout form state after order
+            deliveryTypeDropdown.value = '';
+            detailsContainer.style.display = 'none';
+            placeOrderButton.disabled = true;
+        });
+        
+        // Modal events
+        closeModal.addEventListener('click', closeItemModal);
+        modalAddBase.addEventListener('click', () => addToCartFromModal(false));
+        
+        // Chips and drink button events
+        modalAddChipsDrink.addEventListener('click', () => {
+            drinkSelection.style.display = 'block';
+            modalAddChipsDrink.style.display = 'none';
+        });
+        
+        modalAddChipsDrinkFinal.addEventListener('click', () => {
+            const selectedDrink = drinkSelect.value;
+            addToCartFromModal(true, selectedDrink);
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === itemModal) {
+                closeItemModal();
+            }
+        });
+        
+        // Set initial active filter
+        document.querySelector('[data-tag="all"]').classList.add('active');
+        
+        // Image position control events
+        imagePositionSlider.addEventListener('input', (e) => {
+            updateImagePosition(e.target.value);
+        });
+        
+        resetPositionButton.addEventListener('click', () => {
+            imagePositionSlider.value = 0;
+            updateImagePosition(0);
+        });
+
+        // NEW: Checkout form logic
+        deliveryTypeDropdown.addEventListener('change', (e) => {
+            if (e.target.value === 'collection') {
+                detailsContainer.style.display = 'block';
+                pickupTimeContainer.style.display = 'block';
+                checkFormValidity();
+            } else {
                 detailsContainer.style.display = 'none';
+                pickupTimeContainer.style.display = 'none';
                 placeOrderButton.disabled = true;
-            });
-            
-            // Modal events
-            closeModal.addEventListener('click', closeItemModal);
-            modalAddBase.addEventListener('click', () => addToCartFromModal(false));
-            
-            // Chips and drink button events
-            modalAddChipsDrink.addEventListener('click', () => {
-                drinkSelection.style.display = 'block';
-                modalAddChipsDrink.style.display = 'none';
-            });
-            
-            modalAddChipsDrinkFinal.addEventListener('click', () => {
-                const selectedDrink = drinkSelect.value;
-                addToCartFromModal(true, selectedDrink);
-            });
-            
-            // Close modal when clicking outside
-            window.addEventListener('click', (e) => {
-                if (e.target === itemModal) {
-                    closeItemModal();
-                }
-            });
-            
-            // Set initial active filter
-            document.querySelector('[data-tag="all"]').classList.add('active');
-            
-            // Image position control events
-            imagePositionSlider.addEventListener('input', (e) => {
-                updateImagePosition(e.target.value);
-            });
-            
-            resetPositionButton.addEventListener('click', () => {
-                imagePositionSlider.value = 0;
-                updateImagePosition(0);
-            });
-
-            // NEW: Checkout form logic
-            deliveryTypeDropdown.addEventListener('change', (e) => {
-                if (e.target.value === 'collection') {
-                    detailsContainer.style.display = 'block';
-                    checkFormValidity();
-                } else {
-                    detailsContainer.style.display = 'none';
-                    placeOrderButton.disabled = true;
-                }
-            });
-
-            checkoutInputs.forEach(input => {
-                input.addEventListener('input', checkFormValidity);
-            });
-
-            // NEW: Quantity selector events
-            decreaseQuantityBtn.addEventListener('click', () => {
-                let value = parseInt(quantityInput.value);
-                if (value > 1) {
-                    quantityInput.value = value - 1;
-                    updateQuantityButtons();
-                    if (currentModalItem) {
-                        const hasOptions = currentModalItem.options && currentModalItem.options.length > 0;
-                        let basePrice = hasOptions ? 
-                            currentModalItem.options[document.getElementById('modal-option-select').value].price : 
-                            currentModalItem.price;
-                        updateModalPrices(currentModalItem, basePrice);
-                    }
-                }
-            });
-
-            increaseQuantityBtn.addEventListener('click', () => {
-                let value = parseInt(quantityInput.value);
-                if (value < MAX_QUANTITY_PER_ITEM) {
-                    quantityInput.value = value + 1;
-                    updateQuantityButtons();
-                    if (currentModalItem) {
-                        const hasOptions = currentModalItem.options && currentModalItem.options.length > 0;
-                        let basePrice = hasOptions ? 
-                            currentModalItem.options[document.getElementById('modal-option-select').value].price : 
-                            currentModalItem.price;
-                        updateModalPrices(currentModalItem, basePrice);
-                    }
-                }
-            });
-
-            quantityInput.addEventListener('input', (e) => {
-                let value = parseInt(e.target.value);
-                if (isNaN(value) || value < 1) {
-                    e.target.value = 1;
-                } else if (value > MAX_QUANTITY_PER_ITEM) {
-                    e.target.value = MAX_QUANTITY_PER_ITEM;
-                }
-                updateQuantityButtons();
-                if (currentModalItem) {
-                    const hasOptions = currentModalItem.options && currentModalItem.options.length > 0;
-                    let basePrice = hasOptions ? 
-                        currentModalItem.options[document.getElementById('modal-option-select').value].price : 
-                        currentModalItem.price;
-                    updateModalPrices(currentModalItem, basePrice);
-                }
-            });
-
-            quantityInput.addEventListener('change', (e) => {
-                let value = parseInt(e.target.value);
-                if (isNaN(value) || value < 1) {
-                    e.target.value = 1;
-                } else if (value > MAX_QUANTITY_PER_ITEM) {
-                    e.target.value = MAX_QUANTITY_PER_ITEM;
-                }
-                updateQuantityButtons();
-                if (currentModalItem) {
-                    const hasOptions = currentModalItem.options && currentModalItem.options.length > 0;
-                    let basePrice = hasOptions ? 
-                        currentModalItem.options[document.getElementById('modal-option-select').value].price : 
-                        currentModalItem.price;
-                    updateModalPrices(currentModalItem, basePrice);
-                }
-            });
-        }
-
-        // Run initialization when DOM is loaded
-        document.addEventListener('DOMContentLoaded', async () => {
-            await loadAllJSON();  // make sure all JSON files are fetched
-            init();
+            }
         });
-    </script>
+
+        checkoutInputs.forEach(input => {
+            input.addEventListener('input', checkFormValidity);
+        });
+
+        // NEW: Quantity selector events
+        decreaseQuantityBtn.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            if (value > 1) {
+                quantityInput.value = value - 1;
+                updateQuantityButtons();
+                if (currentModalItem) {
+                    const hasOptions = currentModalItem.options && currentModalItem.options.length > 0;
+                    let basePrice = hasOptions ? 
+                        currentModalItem.options[document.getElementById('modal-option-select').value].price : 
+                        currentModalItem.price;
+                    updateModalPrices(currentModalItem, basePrice);
+                }
+            }
+        });
+
+        increaseQuantityBtn.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            if (value < MAX_QUANTITY_PER_ITEM) {
+                quantityInput.value = value + 1;
+                updateQuantityButtons();
+                if (currentModalItem) {
+                    const hasOptions = currentModalItem.options && currentModalItem.options.length > 0;
+                    let basePrice = hasOptions ? 
+                        currentModalItem.options[document.getElementById('modal-option-select').value].price : 
+                        currentModalItem.price;
+                    updateModalPrices(currentModalItem, basePrice);
+                }
+            }
+        });
+
+        quantityInput.addEventListener('input', (e) => {
+            let value = parseInt(e.target.value);
+            if (isNaN(value) || value < 1) {
+                e.target.value = 1;
+            } else if (value > MAX_QUANTITY_PER_ITEM) {
+                e.target.value = MAX_QUANTITY_PER_ITEM;
+            }
+            updateQuantityButtons();
+            if (currentModalItem) {
+                const hasOptions = currentModalItem.options && currentModalItem.options.length > 0;
+                let basePrice = hasOptions ? 
+                    currentModalItem.options[document.getElementById('modal-option-select').value].price : 
+                    currentModalItem.price;
+                updateModalPrices(currentModalItem, basePrice);
+            }
+        });
+
+        quantityInput.addEventListener('change', (e) => {
+            let value = parseInt(e.target.value);
+            if (isNaN(value) || value < 1) {
+                e.target.value = 1;
+            } else if (value > MAX_QUANTITY_PER_ITEM) {
+                e.target.value = MAX_QUANTITY_PER_ITEM;
+            }
+            updateQuantityButtons();
+            if (currentModalItem) {
+                const hasOptions = currentModalItem.options && currentModalItem.options.length > 0;
+                let basePrice = hasOptions ? 
+                    currentModalItem.options[document.getElementById('modal-option-select').value].price : 
+                    currentModalItem.price;
+                updateModalPrices(currentModalItem, basePrice);
+            }
+        });
+    }
+
+    // Run initialization when DOM is loaded
+    // Run initialization when DOM is loaded
+    document.addEventListener('DOMContentLoaded', async () => {
+        await loadAllJSON();  // make sure all JSON files are fetched
+        init();
+
+        // Smooth scrolling for navigation (bind once after DOM is ready)
+        document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+
+            // Update active navigation link
+            document.querySelectorAll('.nav-link').forEach(navLink => {
+                navLink.classList.remove('active-section');
+            });
+            link.classList.add('active-section');
+            }
+        });
+    });
+</script>
 </body>
+
 </html>
