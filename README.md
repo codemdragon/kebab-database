@@ -1,34 +1,49 @@
-# Kebab O'Clock – Menu Management Guide
+# Kebab O'Clock – Menu Management & Order API Guide
 
-This guide explains how to manage the menu items for the **Kebab O'Clock website** by editing the associated JSON files.
+This guide explains how to manage the menu items for the **Kebab O'Clock website** by editing the associated JSON files, and how the front‑end interacts with the backend API.
 
 ---
 
-## 1. Menu Data Structure
+## 1. Data Structure
 
-The menu items are organized into several JSON files, each representing a category. These files are loaded dynamically by the website to display the menu.
+The website's content is managed through several JSON files. These files must all be located in the same directory as `index.html`.
 
-**List of JSON Files:**
+### 1.1 Menu Data
 
-* `beefy-tastic.json`
-* `chicken-menu.json`
-* `wrap-tastic.json`
-* `don-shawarma.json`
-* `grilled-tastic.json`
-* `wings-tenders.json`
-* `veggie-tastic.json`
-* `drinks-milkshakes.json`
-* `addons-sauces.json`
-* `loaded-fries.json`
+Each file represents a menu category and is loaded dynamically by the website.
 
-⚠️ **Important:** All JSON files must be located in the same directory as `index.html`.
-Images for menu items are now stored in the `images/` folder, so the `image` field should point to `images/YourImageName.jpg`.
+**List of Menu JSON Files:**
+
+*   `beefy-tastic.json`
+*   `chicken-menu.json`
+*   `wrap-tastic.json`
+*   `don-shawarma.json`
+*   `grilled-tastic.json`
+*   `wings-tenders.json`
+*   `veggie-tastic.json`
+*   `drinks-milkshakes.json`
+*   `addons-sauces.json`
+*   `loaded-fries.json`
+
+### 1.2 Pickup Times Data (`pickup-times.json`)
+
+A new file, `pickup-times.json`, is used to dynamically load the available pickup slots for collection orders.
+
+**Example Format:**
+
+```json
+{
+  "times": ["18:00", "18:15", "18:30", "19:00"]
+}
+```
+
+⚠️ **Important:** Images for menu items must be stored in the `images/` folder.
 
 ---
 
 ## 2. Understanding a Menu Item JSON Object
 
-Example:
+Example of a menu item from `wings-tenders.json`:
 
 ```json
 {
@@ -51,123 +66,81 @@ Example:
 
 ### Field Explanations
 
-* **name**: Name of the menu item. *(string)*
-* **description**: Short description displayed under the name. *(string)*
-* **image**: Filename of the image (must exist in the `images/` folder). *(string)*
-  e.g. `"images/Chocolate Milkshake.jpg"`
-* **tags**:
-
-  * Used for categorization and filtering.
-  * First tag = badge on menu card.
-  * Special tags:
-
-    * `"D"` → Drinks (centered images, scaled properly for cans).
-    * `"M"` → Milkshakes (image scaled fully outward to show full picture on all screen sizes).
-* **mealPriceModifier**: Extra cost when upgrading to a meal. *(decimal)*
-* **options** *(optional)*: Variations of the item.
-
-  * **Special behavior:**
-
-    * If *all options* have prices → price shows on the **button**.
-    * If *not all options* have prices → price shows in the **dropdown**.
-    * Example: Samosas (Chicken/Lamb) both priced → shows on button.
-* **showSlider**: Always set to `false` (legacy field).
-* **sauces**: `true`/`false` – whether customer can choose sauces.
-* **vegetables**: `true`/`false` – whether customer can choose vegetables.
+*   **name**: The display name of the menu item. *(string)*
+*   **description**: A short description shown under the name. *(string)*
+*   **image**: The path to the item's image. Must exist in the `images/` folder. *(string)*
+*   **tags**: Used for categorization and special formatting.
+    *   The first tag in the array is displayed as a badge on the menu card.
+    *   A tag of `"D"` formats the image for a drink can (centered).
+    *   A tag of `"M"` formats the image for a milkshake (scaled to show the full image).
+*   **mealPriceModifier**: The additional cost to make the item a meal (adds Chips & a Drink). *(decimal)*
+*   **options** *(optional)*: An array of variations for the item (e.g., size, flavor).
+    *   If all options have a price, they appear as buttons.
+    *   If any option lacks a price, they appear as a dropdown list.
+*   **showSlider**: Legacy field. Should always be `false`.
+*   **sauces**: If `true`, the customer can select sauces for this item.
+*   **vegetables**: If `true`, the customer can select vegetables for this item.
 
 ---
 
 ## 3. Image Rules
 
-* **Size**: All images must be **1200 × 1200 px**.
-* **Format**: `.jpg` or `.png`.
-* **Location**: All images go inside the `images/` folder.
-* **Naming**: Must match exactly the `image` field in JSON (case-sensitive), including the `images/` prefix.
-
-**Special Cases:**
-
-* **Drinks** (`"D"` tag): Canned drinks centered properly.
-* **Milkshakes** (`"M"` tag): Full image always shown, scaled outward.
-* **All Other Items**: Positioned according to Website Manager’s preferences.
+*   **Size**: Recommended 1200 × 1200 pixels.
+*   **Format**: `.jpg` or `.png`.
+*   **Location**: Must be placed inside the `images/` folder.
+*   **Naming**: The filename in the `image` field is case-sensitive and must match the actual file exactly.
 
 ---
 
 ## 4. Editing Workflow
 
-1. Identify which JSON file contains the category.
-2. Copy an existing item as a template.
-3. Edit `name`, `description`, `image`, `tags`, `price/options`.
-4. Save the JSON file.
-5. Add the image file (1200×1200 px) to the `images/` folder.
-6. Validate the JSON (use [jsonlint.com](https://jsonlint.com)) to avoid syntax errors.
-7. Refresh the website to see changes.
+1.  **Choose** the correct JSON file for the menu category you're editing.
+2.  **Copy** an existing menu item object to use as a template.
+3.  **Update** the fields (`name`, `description`, `image`, `price`, `options`, etc.).
+4.  **Save** the JSON file.
+5.  **Upload** the new image (1200×1200 px) to the `images/` folder.
+6.  **(Optional but Recommended)** Validate your JSON syntax using a tool like [jsonlint.com](https://jsonlint.com).
+7.  **Refresh** the website to see your changes.
 
 ---
 
-## 5. Examples
+## 5. Front-End Features & Checkout Flow
 
-### Drink Example (Coke Can)
+### 5.1 Cart Enhancements
 
-```json
-{
-  "name": "Coke Can",
-  "description": "Chilled Coca Cola (330ml)",
-  "image": "images/Coke Can.jpg",
-  "price": 1.50,
-  "tags": ["Drinks", "D"],
-  "mealPriceModifier": 0.00,
-  "showSlider": false,
-  "sauces": false,
-  "vegetables": false
-}
-```
+*   A **Clear Cart** button has been added to empty the entire order.
+*   The item modal now includes a **quantity selector**, allowing customers to choose between 1 and 10 of a single item configuration.
 
-### Milkshake Example
+### 5.2 Checkout Improvements
 
-```json
-{
-  "name": "Chocolate Milkshake",
-  "description": "Thick chocolate shake with whipped cream",
-  "image": "images/Chocolate Milkshake.jpg",
-  "price": 3.50,
-  "tags": ["Milkshake", "M"],
-  "mealPriceModifier": 0.00,
-  "showSlider": false,
-  "sauces": false,
-  "vegetables": false
-}
-```
+The **“Place Order” button is disabled by default** and only becomes active when all of the following conditions are met:
+1.  An **Order Type** has been selected (currently only “Collection”).
+2.  All **Customer Details** are filled out (Full Name, Phone Number, Email, and Card Details).
+3.  A **Pickup Time** has been chosen from the available slots.
 
-### Options Example (Samosa)
-
-```json
-{
-  "name": "Samosas (3 Pieces)",
-  "description": "Crispy samosas",
-  "image": "images/Samosas.jpg",
-  "tags": ["Addons & Sauces"],
-  "mealPriceModifier": 0.00,
-  "showSlider": false,
-  "sauces": false,
-  "vegetables": false,
-  "options": [
-    { "name": "Chicken", "price": 2.50 },
-    { "name": "Lamb", "price": 2.50 }
-  ]
-}
-```
+The button's text dynamically updates to show the total price of the order (e.g., "Place Order – £15.50").
 
 ---
 
-## 6. Order Payload Examples for Backend
+## 6. Order Payload Structure
 
-These show how the front‑end sends orders to the backend with different combinations:
+When a user places an order, the front-end sends a structured JSON object to the backend. The menu JSON structure itself is unchanged, but the order payloads have been expanded.
 
-#### 1. Chicken Tenders 10-piece (BBQ sauce, no chips/drink):
+### Key Payload Fields
+
+*   **`selectedOption`**: If an item has options (e.g., "10 piece"), the chosen option is included here.
+*   **`selectedSauce`**: The selected sauce is included.
+*   **`selectedVegetables`**: An array of selected vegetables.
+*   **Meal Upgrade**: If a user upgrades to a meal, a **separate line item** named "Chips & Drink" is added to the order, using the `mealPriceModifier` value as its price.
+
+### Payload Examples
+
+#### Example 1: Chicken Tenders (10-piece) with BBQ sauce, no meal
 
 ```json
-   {
+{
   "deliveryType": "collection",
+  "pickupTime": "18:30",
   "customer": {
     "fullName": "Jane Smith",
     "phone": "555-1234",
@@ -187,16 +160,17 @@ These show how the front‑end sends orders to the backend with different combin
 }
 ```
 
-#### 2. Chicken Tenders 10-piece with Chips & Drink (Pepsi):
+#### Example 2: Chicken Tenders (10-piece) with BBQ sauce, upgraded to a meal
 
 ```json
-   {
-  "deliveryType": "delivery",
+{
+  "deliveryType": "collection",
+  "pickupTime": "19:00",
   "customer": {
     "fullName": "John Doe",
     "phone": "123-456-7890",
     "email": "john@example.com",
-    "specialInstructions": "Please ring the doorbell."
+    "specialInstructions": ""
   },
   "items": [
     {
@@ -216,125 +190,73 @@ These show how the front‑end sends orders to the backend with different combin
 }
 ```
 
-#### 3. Samosas (3 Pieces) – Chicken:
-
-```json
-  {
-  "deliveryType": "collection",
-  "customer": {
-    "fullName": "Alice Brown",
-    "phone": "555-9876",
-    "email": "alice@example.com",
-    "specialInstructions": ""
-  },
-  "items": [
-    {
-      "name": "Samosas (3 Pieces) (Chicken)",
-      "price": 2.50,
-      "quantity": 1,
-      "selectedOption": "Chicken"
-    }
-  ],
-  "total": "2.50"
-}
-```
-
-#### 4. Samosas (3 Pieces) – Lamb with Chips & Drink (Coke):
-
-```json
-  {
-  "deliveryType": "delivery",
-  "customer": {
-    "fullName": "Bob Green",
-    "phone": "555-4321",
-    "email": "bob@example.com",
-    "specialInstructions": "Extra napkins"
-  },
-  "items": [
-    {
-      "name": "Samosas (3 Pieces) (Lamb)",
-      "price": 2.50,
-      "quantity": 1,
-      "selectedOption": "Lamb"
-    },
-    {
-      "name": "Chips & Drink (Coke)",
-      "price": 2.50,
-      "quantity": 1
-    }
-  ],
-  "total": "5.00"
-}
-```
-##Notes on the total feild:
-* The total is calculated by summing (price × quantity) for all items in the cart.
-* It is formatted as a string with two decimal places (e.g., "11.50").
-* This field is included alongside the detailed items array in the order payload sent to the backend.
-* Including the total helps with order validation, reporting, and simplifies backend processing.
-
-**Key points for backend:**
-
-* `selectedOption` can be a variant name (Chicken/Lamb) or portion size (10 piece). It comes directly from the JSON `options[].name`.
-* `price` is always per-unit price from the chosen option (or base price if no options).
-* If chips/drink is added, you’ll always see a second line `{ "name": "Chips & Drink (DrinkName)", "price": mealPriceModifier, "quantity": sameAsMainItem }`.
-* If no chips/drink, there’s no second line.
-* Sauces/vegetables are only on the main line.
-
 ---
 
-## 7. Backups & Support
+## 7. Backend API Specification
 
-* Always **keep a backup** of JSON files before making changes.
-* If something breaks, restore the previous backup.
-* The Developer can provide guidance if needed, but **ongoing menu management is the Client’s responsibility**.
+### 7.1 API Base URL
+
+The API endpoint is configured via the `API_BASE` variable in `index.html`. This controls whether the site runs in demo mode or sends orders to a live server.
+
+```javascript
+// Set to your server's URL to enable backend integration
+// Set to '' (empty string) to run in demo mode
+const API_BASE = 'https://api.kebaboclock.com';
+```
+
+*   **Live Mode (`API_BASE` is set):** Real orders are sent to `${API_BASE}/orders`. The confirmation modal displays the actual response message from the server.
+*   **Demo Mode (`API_BASE = ''`):** No API call is made. The site shows a fake confirmation message after a 2-second delay.
+
+### 7.2 Endpoints
+
+#### `POST /orders`
+
+This is the primary endpoint for receiving new orders.
+
+*   **Request Body**: A JSON object matching the structure described in **Section 6**.
+*   **Successful Responses (200 OK)**:
+    *   **Approved:** The order was accepted by the backend.
+      ```json
+      {
+        "status": "approved",
+        "message": "Your order has been accepted. It will be ready for pickup at 19:30."
+      }
+      ```
+    *   **Denied:** The order was received but could not be fulfilled (e.g., restaurant is too busy).
+      ```json
+      {
+        "status": "denied",
+        "message": "We are currently too busy to accept new orders. Please try again later."
+      }
+      ```
+*   **Error Response (e.g., 400 or 500)**:
+    *   **Error:** A server or validation error occurred.
+      ```json
+      {
+        "status": "error",
+        "message": "Could not process your order due to a technical issue. Please contact the store directly."
+      }
+      ```
+
+### 7.3 CORS
+
+The backend server must be configured with Cross-Origin Resource Sharing (CORS) headers to permit `POST` requests from the website's domain (e.g., your Vercel deployment URL).
 
 ---
 
 ## 8. Deploying Changes to Vercel
 
-The site is automatically deployed from this GitHub repository using Vercel.
+The website is configured for automatic deployment from its GitHub repository.
 
-* **If you edit files directly on GitHub**
-  Save/commit your changes. Vercel will automatically pick up the new commit and redeploy within a minute or two.
+*   **Editing on GitHub**: Committing changes directly on the GitHub website will automatically trigger a new deployment on Vercel.
+*   **Editing Locally**: If you work on the files locally, `git pull` to get the latest version, make your changes, then `git commit` and `git push` them to the repository. Vercel will then redeploy.
 
-* **If you work locally on your PC**
-
-  1. Pull or clone the repo.
-  2. Make your JSON/image changes.
-  3. Commit and push to the `main` branch (or the branch Vercel is connected to).
-
-  Vercel will build and deploy automatically after your push.
-
-* **Check deployment status**
-  In your Vercel dashboard you’ll see the deployment logs and the new version going live.
+You can monitor deployment status and check for any build errors in your Vercel dashboard.
 
 ---
 
-## 9. API Integration (Future-Proofing)
+## 9. Backups & Support
 
-The front-end code is already set up to talk to a backend API when it becomes available:
-
-```js
-// In index.html
-const API_BASE = ''; // e.g. 'https://api.yoursite.com'
-
-// Helper to get file/API URL
-function getJsonUrl(file) {
-  return API_BASE ? `${API_BASE}/${file}` : file;
-}
-```
-
-* **Current behaviour**: With `API_BASE = ''` the site loads the JSON files locally and does not send orders anywhere.
-* **When backend is ready**: Set `API_BASE` to your API’s URL (for example `https://api.kebaboclock.com`).
-
-  * Menu JSON will be fetched from the API instead of local files.
-  * Orders will automatically be sent to `${API_BASE}/orders` via `POST`.
-
-No other code changes are needed — just update the `API_BASE` value.
-
-
-
-
-
-
-
+*   **Always back up the JSON files** before making significant changes.
+*   If you introduce a syntax error that breaks the menu, revert to a backed-up version of the file.
+*   The client is responsible for regular menu maintenance. The developer is available for support with structural changes or bug fixes.
